@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>West Island Smiles · Homepage preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1D2B4F;--navy-2:#2A3B66;--teal:#2FA3A6;--teal-2:#7FD3CF;--teal-soft:#E4F4F2;
+  --cream:#FBF8F3;--sand:#F3EDE3;--ink:#1A2340;--muted:#5E6782;--line:rgba(29,43,79,.1);
+  --r:28px;--ease:cubic-bezier(.2,.7,.2,1)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.02em;margin:0;font-variation-settings:"opsz" 144}
+h1 em,h2 em{font-style:italic;color:var(--teal);font-weight:300}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(47,163,166,.18)}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:.96rem;text-decoration:none;white-space:nowrap;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s,background .3s,color .3s;isolation:isolate}
+.btn svg{width:18px;height:18px}
+.btn-dark{background:var(--navy);color:#fff;box-shadow:0 18px 34px -16px rgba(29,43,79,.7)}
+.btn-dark:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,var(--teal),#238c8f);transform:translateX(-101%);transition:transform .5s var(--ease)}
+.btn-dark:hover:before{transform:none}
+.btn-line{border:1.5px solid var(--line);background:rgba(255,255,255,.6);backdrop-filter:blur(8px);color:var(--navy)}
+.btn:hover{transform:translateY(-3px)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* ruban */
+.ribbon{background:var(--navy);color:rgba(255,255,255,.72);font-size:.76rem;text-align:center;padding:7px 14px}
+.ribbon b{color:var(--teal-2)}
+.infobar{border-bottom:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.infobar .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:9px;padding-bottom:9px}
+.infobar span{display:inline-flex;align-items:center;gap:7px}
+.infobar svg{width:14px;height:14px;color:var(--teal)}
+.open-dot{width:8px;height:8px;border-radius:50%;background:#3cc28a;box-shadow:0 0 0 0 rgba(60,194,138,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(60,194,138,0)}100%{box-shadow:0 0 0 0 rgba(60,194,138,0)}}
+
+/* en-tête */
+header{position:sticky;top:0;z-index:40;transition:background .4s,box-shadow .4s,backdrop-filter .4s}
+header.solid{background:rgba(251,248,243,.82);backdrop-filter:saturate(1.4) blur(16px);box-shadow:0 1px 0 var(--line),0 16px 40px -30px rgba(29,43,79,.5)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:86px;transition:height .4s var(--ease)}
+header.solid .wrap{height:70px}
+.logo img{height:44px;width:auto;transition:height .4s var(--ease)}
+header.solid .logo img{height:38px}
+nav.main{display:flex;align-items:center;gap:6px}
+nav.main>a,nav.main .dd>a{position:relative;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--navy);transition:background .25s}
+nav.main>a:hover,nav.main .dd>a:hover{background:rgba(47,163,166,.1)}
+.dd{position:relative}
+.dd>a:after{content:"";display:inline-block;width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-3px) rotate(45deg);margin-left:8px;transition:transform .3s}
+.dd:hover>a:after{transform:translateY(0) rotate(225deg)}
+.menu{position:absolute;top:calc(100% + 10px);left:-10px;min-width:260px;background:#fff;border-radius:18px;padding:10px;box-shadow:0 30px 60px -25px rgba(29,43,79,.45),0 0 0 1px var(--line);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s,transform .3s var(--ease)}
+.dd:hover .menu{opacity:1;transform:none;pointer-events:auto}
+.menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;text-decoration:none;font-weight:600;font-size:.9rem;color:var(--navy)}
+.menu a:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal-2)}
+.menu a:hover{background:var(--teal-soft)}
+.hright{display:flex;align-items:center;gap:10px}
+.lang{font-weight:700;font-size:.82rem;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+.lang:hover{color:var(--navy)}
+.hright .btn{padding:12px 20px;font-size:.9rem}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fff;position:relative;cursor:pointer}
+.burger i{position:absolute;left:15px;right:15px;height:2px;border-radius:2px;background:var(--navy);transition:transform .35s var(--ease),opacity .3s}
+.burger i:nth-child(1){top:18px}.burger i:nth-child(2){top:23px}.burger i:nth-child(3){top:28px}
+body.open .burger i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+body.open .burger i:nth-child(2){opacity:0}
+body.open .burger i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:35;background:var(--cream);padding:220px 28px 40px;display:flex;flex-direction:column;gap:2px;clip-path:circle(0% at calc(100% - 52px) 52px);transition:clip-path .7s var(--ease);overflow:auto}
+body.open .drawer{clip-path:circle(150% at calc(100% - 52px) 52px)}
+.drawer a{font-family:Fraunces,serif;font-size:2rem;text-decoration:none;color:var(--navy);padding:10px 0;border-bottom:1px solid var(--line);opacity:0;transform:translateY(18px);transition:opacity .5s,transform .5s var(--ease)}
+body.open .drawer a{opacity:1;transform:none}
+body.open .drawer a:nth-child(2){transition-delay:.06s}body.open .drawer a:nth-child(3){transition-delay:.12s}body.open .drawer a:nth-child(4){transition-delay:.18s}body.open .drawer a:nth-child(5){transition-delay:.24s}body.open .drawer a:nth-child(6){transition-delay:.3s}
+.drawer .sub{font-family:"Plus Jakarta Sans",sans-serif;font-size:.95rem;font-weight:700;color:var(--teal);border:0;margin-top:20px}
+
+/* héros */
+.hero{position:relative;padding:60px 0 110px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0;animation:float 18s ease-in-out infinite}
+.blob.b1{width:520px;height:520px;background:#BFE8E3;top:-140px;right:-120px}
+.blob.b2{width:420px;height:420px;background:#E8DCF5;bottom:-160px;left:-140px;animation-delay:-6s;opacity:.4}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,30px) scale(1.08)}}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,5.1rem);margin:22px 0 24px}
+.hero h1 .line{white-space:nowrap}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line>span{display:inline-block;transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
+.hero h1 .line:nth-child(2)>span{animation-delay:.12s}.hero h1 .line:nth-child(3)>span{animation-delay:.24s}
+@keyframes rise{to{transform:none}}
+.hero p.lead{font-size:1.14rem;color:var(--muted);max-width:520px;margin:0 0 34px}
+.fade{opacity:0;animation:fadeup .9s var(--ease) forwards}
+.d1{animation-delay:.45s}.d2{animation-delay:.6s}.d3{animation-delay:.75s}.d4{animation-delay:.9s}
+@keyframes fadeup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.stats{display:flex;gap:38px;margin-top:46px}
+.stats b{display:block;font-family:Fraunces,serif;font-weight:400;font-size:2.4rem;line-height:1;color:var(--navy)}
+.stats span{font-size:.84rem;color:var(--muted)}
+.visual{position:relative;height:620px}
+.arch{position:absolute;inset:0 40px 0 30px;border-radius:300px 300px 36px 36px;overflow:hidden;box-shadow:0 50px 90px -40px rgba(29,43,79,.55)}
+.arch img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);animation:zoomout 2.4s var(--ease) forwards}
+@keyframes zoomout{to{transform:scale(1)}}
+.float{position:absolute;background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;box-shadow:0 30px 50px -25px rgba(29,43,79,.45);padding:16px 18px;animation:bob 6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.f-hours{left:-10px;bottom:70px;min-width:220px}
+.f-hours small{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.f-hours b{display:block;font-size:1.05rem;color:var(--navy);margin-top:4px}
+.f-hours span{font-size:.82rem;color:var(--muted)}
+.f-dr{right:0;top:60px;display:flex;align-items:center;gap:12px;animation-delay:-3s}
+.f-dr img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top}
+.f-dr b{display:block;font-size:.92rem;color:var(--navy);line-height:1.2}
+.f-dr span{font-size:.78rem;color:var(--muted)}
+.f-badge{right:-6px;bottom:-14px;width:118px;height:118px;border-radius:50%;padding:0;display:grid;place-items:center;background:var(--navy);border:0;animation:none}
+.f-badge svg{position:absolute;inset:0;animation:spin 18s linear infinite}
+.f-badge text{font-size:11.5px;letter-spacing:3px;fill:#fff;font-weight:700;text-transform:uppercase}
+.f-badge .core{width:46px;height:46px;border-radius:50%;background:var(--teal);display:grid;place-items:center;color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* défilant */
+.marquee{background:var(--navy);color:#fff;overflow:hidden;padding:22px 0;transform:rotate(-1.2deg);margin:-10px -20px 0;position:relative;z-index:2}
+.track{display:flex;gap:48px;width:max-content;animation:scrollx 34s linear infinite}
+.track span{display:inline-flex;align-items:center;gap:48px;font-family:Fraunces,serif;font-size:1.7rem;font-style:italic;font-weight:300;white-space:nowrap}
+.track span:after{content:"";width:10px;height:10px;border-radius:50%;background:var(--teal-2)}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+
+section{padding:130px 0}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* présentation */
+.intro .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.img-card{position:relative}
+.img-card img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.img-card .tag{position:absolute;right:-24px;top:40px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 30px 50px -25px rgba(29,43,79,.4);font-weight:700;color:var(--navy);display:flex;gap:12px;align-items:center}
+.img-card .tag i{width:40px;height:40px;border-radius:12px;background:var(--teal-soft);display:grid;place-items:center;color:var(--teal)}
+.img-card .tag svg{width:22px;height:22px}
+.intro h2{font-size:clamp(2.3rem,4.4vw,3.8rem);margin:18px 0 22px}
+.intro p{color:var(--muted);font-size:1.06rem;margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--navy);transition:background .25s,color .25s,border-color .25s}
+.chips span:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* services */
+.services{background:#fff;border-radius:48px 48px 0 0}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.shead h2{font-size:clamp(2.3rem,4.4vw,3.8rem);margin-top:16px;max-width:14ch}
+.shead p{max-width:380px;color:var(--muted);margin:0}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sv{position:relative;padding:34px 30px 30px;border-radius:24px;background:var(--cream);overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s;isolation:isolate;min-height:270px;display:flex;flex-direction:column}
+.sv:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(150deg,var(--navy),var(--navy-2));opacity:0;transition:opacity .45s}
+.sv:hover{transform:translateY(-8px);box-shadow:0 40px 60px -35px rgba(29,43,79,.6)}
+.sv:hover:before{opacity:1}
+.sv .n{position:absolute;right:26px;top:22px;font-family:Fraunces,serif;font-size:1rem;color:var(--muted);transition:color .45s}
+.sv .ic{width:58px;height:58px;border-radius:18px;background:#fff;display:grid;place-items:center;color:var(--teal);box-shadow:0 10px 24px -14px rgba(29,43,79,.35);transition:background .45s,color .45s,transform .45s var(--ease)}
+.sv .ic svg{width:28px;height:28px}
+.sv:hover .ic{background:var(--teal);color:#fff;transform:rotate(-8deg) scale(1.05)}
+.sv h3{font-size:1.65rem;margin:26px 0 10px;transition:color .45s}
+.sv p{margin:0;color:var(--muted);font-size:.97rem;transition:color .45s}
+.sv .more{margin-top:auto;padding-top:22px;font-weight:700;font-size:.9rem;color:var(--teal);display:inline-flex;gap:8px;align-items:center;transition:color .45s,gap .3s}
+.sv:hover h3,.sv:hover .more{color:#fff}
+.sv:hover p,.sv:hover .n{color:rgba(255,255,255,.72)}
+.sv:hover .more{gap:14px}
+
+/* docteur */
+.doctor{background:#fff;padding-top:40px}
+.doc{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center;background:var(--cream);border-radius:40px;padding:60px}
+.doc .ph{position:relative;isolation:isolate}
+.doc .ph img{border-radius:220px 220px 28px 28px;width:100%;aspect-ratio:5/6;object-fit:cover;object-position:top}
+.doc .ph:after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1.5px solid var(--teal);border-radius:220px 220px 28px 28px;z-index:-1}
+.doc h2{font-size:clamp(2.3rem,4vw,3.4rem);margin:16px 0 20px}
+.doc p{color:var(--muted);margin:0 0 14px}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.creds>div{background:#fff;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:.88rem;line-height:1.4;color:var(--navy);font-weight:600}
+.creds i{flex:0 0 32px;height:32px;border-radius:10px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center}
+.creds svg{width:17px;height:17px}
+.creds small{display:block;color:var(--muted);font-weight:500;font-size:.8rem}
+.langs{display:flex;gap:8px;margin-top:22px;align-items:center;font-size:.85rem;color:var(--muted)}
+.langs b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-size:.78rem;letter-spacing:.05em}
+
+/* pourquoi */
+.why{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.why:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(47,163,166,.35),transparent 65%);right:-200px;top:-260px}
+.why .wrap{position:relative}
+.why h2{font-size:clamp(2.3rem,4.4vw,3.8rem);max-width:13ch;margin:16px 0 60px}
+.why h2 em{color:var(--teal-2)}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.15)}
+.w{padding:40px 34px 10px 0;border-right:1px solid rgba(255,255,255,.12);margin-right:34px}
+.w:last-child{border-right:0;margin-right:0}
+.w b{display:block;font-family:Fraunces,serif;font-weight:300;font-size:4.2rem;line-height:1;color:var(--teal-2);margin-bottom:22px}
+.w h3{font-size:1.5rem;margin-bottom:12px}
+.w p{color:rgba(255,255,255,.72);margin:0;font-size:.98rem}
+.why .ctas{margin-top:56px}
+.why .btn-dark{background:#fff;color:var(--navy)}
+.why .btn-dark:hover{color:#fff}
+
+/* faq */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.faq h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:16px 0 18px}
+.faq aside p{color:var(--muted)}
+.faq aside{position:sticky;top:110px}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-family:Fraunces,serif;font-size:1.4rem;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary i{flex:0 0 40px;height:40px;border-radius:50%;border:1px solid var(--line);position:relative;transition:background .3s,transform .4s var(--ease)}
+summary i:before,summary i:after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.6px;background:var(--navy);transform:translate(-50%,-50%);transition:transform .4s var(--ease),background .3s}
+summary i:after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] summary i{background:var(--navy);transform:rotate(180deg)}
+details[open] summary i:before,details[open] summary i:after{background:#fff}
+details[open] summary i:after{transform:translate(-50%,-50%) rotate(0)}
+details p{margin:0 0 22px;color:var(--muted);max-width:640px;animation:fadeup .5s var(--ease)}
+
+/* formulaires */
+.forms{padding-top:0;padding-bottom:0}
+.fbox{background:#fff;border-radius:36px;padding:50px;display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.fbox h2{font-size:clamp(2rem,3.4vw,2.8rem);margin:14px 0 12px}
+.fbox p{color:var(--muted);margin:0}
+.flist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.flist a{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:var(--cream);text-decoration:none;font-weight:600;font-size:.88rem;color:var(--navy);transition:background .3s,transform .3s var(--ease)}
+.flist a:hover{background:var(--teal-soft);transform:translateX(4px)}
+.flist i{flex:0 0 36px;height:36px;border-radius:10px;background:#fff;color:#d9534f;display:grid;place-items:center;font-style:normal;font-size:.62rem;font-weight:800;letter-spacing:.04em}
+
+/* contact */
+.contact{background:linear-gradient(180deg,var(--cream),#fff)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ccard{background:var(--navy);color:#fff;border-radius:36px;padding:50px;position:relative;overflow:hidden}
+.ccard:after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(127,211,207,.3),transparent 65%);right:-140px;bottom:-140px}
+.ccard h2{font-size:clamp(2.2rem,4vw,3.2rem);margin:14px 0 16px}
+.ccard h2 em{color:var(--teal-2)}
+.ccard p{color:rgba(255,255,255,.75);margin:0 0 28px}
+.hours{width:100%;border-collapse:collapse;font-size:.95rem;margin-bottom:28px}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.hours td:last-child{text-align:right;color:var(--teal-2);font-weight:600}
+.hours tr.closed td:last-child{color:rgba(255,255,255,.45)}
+.cinfo{display:grid;gap:14px;position:relative;z-index:1}
+.cinfo a,.cinfo div{display:flex;gap:14px;align-items:center;text-decoration:none;color:#fff;font-weight:600}
+.cinfo i{flex:0 0 42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;color:var(--teal-2)}
+.cinfo svg{width:19px;height:19px}
+.form{background:#fff;border-radius:36px;padding:50px;box-shadow:0 40px 80px -50px rgba(29,43,79,.45)}
+.form h3{font-size:2rem;margin-bottom:8px}
+.form p{color:var(--muted);margin:0 0 26px}
+.field{position:relative;margin-bottom:16px}
+.field input,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:16px;padding:22px 18px 10px;font:inherit;font-size:1rem;background:var(--cream);color:var(--ink);transition:border-color .3s,background .3s}
+.field textarea{min-height:130px;resize:vertical}
+.field label{position:absolute;left:19px;top:16px;color:var(--muted);font-size:.98rem;pointer-events:none;transition:all .25s var(--ease)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);background:#fff}
+.field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{top:7px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.amen span{font-size:.8rem;font-weight:600;color:var(--muted);background:var(--cream);padding:7px 12px;border-radius:999px}
+.form .btn{width:100%;margin-top:6px}
+
+footer{background:var(--navy);color:rgba(255,255,255,.65);padding:60px 0 40px;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+footer .logo-w{background:#fff;border-radius:14px;padding:10px 14px;display:inline-block}
+footer .logo-w img{height:34px}
+.soc{display:flex;gap:10px}
+.soc a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;color:#fff;transition:background .3s,border-color .3s}
+.soc a:hover{background:var(--teal);border-color:var(--teal)}
+.soc svg{width:17px;height:17px}
+
+/* retour en haut */
+.totop{position:fixed;right:24px;bottom:24px;z-index:30;width:56px;height:56px;border-radius:50%;border:0;background:var(--navy);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 18px 36px -14px rgba(29,43,79,.7);opacity:0;transform:translateY(24px) scale(.8);transition:opacity .4s,transform .4s var(--ease),background .3s;pointer-events:none}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{background:var(--teal)}
+.totop .ring{position:absolute;inset:0}
+.totop circle{fill:none;stroke:var(--teal-2);stroke-width:2.5;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%}
+.totop .arrow{width:20px;height:20px;transition:transform .3s var(--ease)}
+.totop:hover .arrow{transform:translateY(-3px)}
+.mbar{display:none}
+
+@media (max-width:1080px){
+  nav.main,.lang,.hright .btn{display:none}
+  .burger{display:block}
+  .hero .wrap,.intro .wrap,.doc,.faq .wrap,.fbox,.cgrid{grid-template-columns:1fr}
+  .visual{height:520px}
+  .sgrid{grid-template-columns:1fr 1fr}
+  .faq aside{position:static}
+  .doc{padding:40px;gap:50px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  section{padding:84px 0}
+  .infobar .hide-m{display:none}
+  .hero{padding:34px 0 70px}
+  .stats{gap:22px}
+  .stats b{font-size:1.9rem}
+  .visual{height:420px}
+  .arch{inset:0 14px 0 10px}
+  .f-hours{left:0;bottom:30px;min-width:190px}
+  .f-dr{right:0;top:20px}
+  .f-badge{display:none}
+  .marquee .track span{font-size:1.3rem}
+  .img-card .tag{right:10px}
+  .sgrid,.creds,.flist,.row2{grid-template-columns:1fr}
+  .services{border-radius:32px 32px 0 0}
+  .doc{padding:26px;border-radius:28px}
+  .wgrid{grid-template-columns:1fr}
+  .w{border-right:0;margin-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding:30px 0}
+  .fbox,.ccard,.form{padding:30px 24px;border-radius:28px}
+  summary{font-size:1.18rem}
+  .totop{bottom:90px;right:16px;width:50px;height:50px}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;border-radius:18px;font-weight:800;text-decoration:none;box-shadow:0 16px 30px -12px rgba(29,43,79,.6)}
+  .mbar .a{background:var(--navy);color:#fff}
+  .mbar .b{flex:0 0 58px;background:var(--teal);color:#fff}
+  footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv,.fade{opacity:1;transform:none}.hero h1 .line>span{transform:none}.arch img{transform:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Aperçu de votre future page d'accueil, préparé par <b>LM Web</b> pour West Island Smiles</div>
+
+<div class="infobar">
+  <div class="wrap">
+    <span><i class="open-dot"></i> Mon to Fri · 802-6600 Trans-Canada Highway, Pointe-Claire</span>
+    <span class="hide-m"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>info@westislandsmiles.com</span>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/logo.png" alt="Dr. Robert Biskup, Dentiste West Island" width="217" height="44"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#">Home</a>
+      <div class="dd"><a href="#services">Services</a>
+        <div class="menu">
+          <a href="#services">Check-ups &amp; Cleanings</a><a href="#services">Children's Dentistry</a><a href="#services">Crowns &amp; Bridges</a><a href="#services">Dental Implants</a><a href="#services">Root Canal Therapy</a><a href="#services">Smile Makeovers</a>
+        </div>
+      </div>
+      <div class="dd"><a href="#doctor">About us</a>
+        <div class="menu"><a href="#doctor">Dr. Robert Biskup</a><a href="#why">Why choose us</a><a href="#">Bill 25</a></div>
+      </div>
+      <a href="#forms">Patient Forms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hright">
+      <a class="lang" href="#">FR</a>
+      <a class="btn btn-dark" href="#contact">Book an Appointment</a>
+      <button class="burger" type="button" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <a href="#services">Services</a>
+  <a href="#doctor">About us</a>
+  <a href="#why">Why choose us</a>
+  <a href="#forms">Patient Forms</a>
+  <a href="#contact">Contact</a>
+  <a class="sub" href="tel:+15146970444">514-697-0444 · Français</a>
+</div>
+
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow fade"><i></i>West Island Family Dentistry</span>
+      <h1><span class="line"><span>Your smile</span></span><span class="line"><span>speaks <em>a thousand</em></span></span><span class="line"><span><em>words</em></span></span></h1>
+      <p class="lead fade d1">We truly believe that our patients deserve the best standard of dental care with fast and friendly service.</p>
+      <div class="ctas fade d2">
+        <a class="btn btn-dark" href="#contact">Book Online <span class="arr">→</span></a>
+        <a class="btn btn-line" href="tel:+15146970444"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.4 9.8a16 16 0 0 0 5.9 5.9l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>514-697-0444</a>
+      </div>
+      <div class="stats fade d3">
+        <div><b data-count="1999">1999</b><span>Dentist since</span></div>
+        <div><b data-count="4">4</b><span>Languages spoken</span></div>
+        <div><b data-count="6">6</b><span>Core services</span></div>
+      </div>
+    </div>
+    <div class="visual fade d2">
+      <div class="arch"><img src="img/clinic.webp" alt="Bright treatment room" fetchpriority="high"></div>
+      <div class="float f-dr"><img src="img/dr-biskup.webp" alt="Dr. Robert Biskup"><div><b>Dr. Robert Biskup</b><span>Certified Invisalign provider</span></div></div>
+      <div class="float f-hours"><small><i class="open-dot"></i>Opening hours</small><b id="today">Mon to Fri</b><span id="todayh">Have a question? 514-697-0444</span></div>
+      <a class="float f-badge" href="#contact" aria-label="Book online">
+        <svg viewBox="0 0 118 118"><defs><path id="c" d="M59,59 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text><textPath href="#c">Book online · Book online · </textPath></text></svg>
+        <span class="core"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="position:static;animation:none"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Dental Implants</span><span>Invisalign</span><span>Teeth Whitening</span><span>Crowns &amp; Bridges</span><span>Children's Dentistry</span><span>Root Canal Therapy</span><span>Emergency Care</span><span>Periodontics</span>
+    <span>Dental Implants</span><span>Invisalign</span><span>Teeth Whitening</span><span>Crowns &amp; Bridges</span><span>Children's Dentistry</span><span>Root Canal Therapy</span><span>Emergency Care</span><span>Periodontics</span>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="img-card rv">
+      <img src="img/smile.webp" alt="Smiling patient" loading="lazy">
+      <div class="tag"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></i>Patients of all ages</div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow"><i></i>Pointe-Claire, West Island</span>
+      <h2>West Island <em>Family</em> Dentistry</h2>
+      <p>Welcome to our dental clinic in Pointe-Claire, in the center of the West Island. We are committed to providing quality healthcare and treat patients of all ages.</p>
+      <p>We provide comprehensive solutions for our patients' oral health needs. Believing in the importance of listening to our patients, we take the time to truly understand each person's needs, goals, and lifestyle. By understanding our patients' objectives we can provide solutions that will improve their health while transforming their smile into something bright and beautiful.</p>
+      <div class="chips"><span>Periodontics</span><span>Preventive</span><span>Cosmetic</span><span>Extractions</span><span>Emergency care</span><span>Invisalign</span><span>Teeth whitening</span><span>Fillings</span><span>Implants</span><span>Gum disease</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <div><span class="eyebrow"><i></i>Our Services</span><h2>Care for <em>every</em> smile.</h2></div>
+      <p>General and family dentistry, from your first check-up to a complete smile makeover.</p>
+    </div>
+    <div class="sgrid">
+      <article class="sv rv"><span class="n">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-6 1.5-6 5 0 2 1 3 1 5s1 8 2.5 8 1.5-5 2.5-5 1 5 2.5 5S17 15 17 13s1-3 1-5c0-3.5-3-5-6-5z"/><path d="M12 13v-3"/></svg></div><h3>Dental Implants</h3><p>The ultimate solution for tooth replacement.</p><span class="more">Learn more →</span></article>
+      <article class="sv rv"><span class="n">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3c-3 0-7 1.5-7 5.5 0 5 3 10 7 12.5 4-2.5 7-7.5 7-12.5C19 4.5 15 3 12 3z"/></svg></div><h3>Check-ups &amp; Cleanings</h3><p>Offering proper oral care to make your teeth last a lifetime.</p><span class="more">Learn more →</span></article>
+      <article class="sv rv"><span class="n">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l3-5h8l3 5"/><path d="M5 9h14l-1.5 11h-11z"/><path d="M9 13h6"/></svg></div><h3>Crowns &amp; Bridges</h3><p>Restore strength and function to your teeth.</p><span class="more">Learn more →</span></article>
+      <article class="sv rv"><span class="n">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2"/><path d="M9 9.5h.01M15 9.5h.01"/></svg></div><h3>Children's Dentistry</h3><p>We make dentistry a fun learning experience for your children.</p><span class="more">Learn more →</span></article>
+      <article class="sv rv"><span class="n">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 22v-6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg></div><h3>Root Canal Therapy</h3><p>West Island Dentist can relieve your dental pain with root canal therapy.</p><span class="more">Learn more →</span></article>
+      <article class="sv rv"><span class="n">06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 8l-3.6 3 1.2 4.7L12 13.3 7.9 15.7 9.1 11 5.5 8l4.6-.4z"/><path d="M5 20h14"/></svg></div><h3>Smile Makeovers</h3><p>Never have to hide your smile again! We can help with Invisalign®.</p><span class="more">Learn more →</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="doctor" id="doctor">
+  <div class="wrap">
+    <div class="doc">
+      <div class="ph rv"><img src="img/dr-biskup.webp" alt="Dr. Robert Biskup" loading="lazy"></div>
+      <div class="rv">
+        <span class="eyebrow"><i></i>About us</span>
+        <h2>Meet Dr. <em>Robert Biskup</em></h2>
+        <p>After graduating from the Université de Montréal's Dental program in 1999, Dr Robert Biskup was accepted in the multidisciplinary residency at Wyckoff Heights Medical Center in New York, an affiliate of the Weill Medical College of Cornell University.</p>
+        <p>After completing his residency, Dr. Biskup went on to practice clinical dentistry in Massachusetts and taught at the University of Tufts' residency program. He enjoys staying up to date on the latest developments and techniques in dentistry, including CAD/CAM and laser technologies. In his spare time, he enjoys staying active and travels around the world.</p>
+        <div class="creds">
+          <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></i><div>Université de Montréal<small>Dental program, 1999</small></div></div>
+          <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></i><div>Wyckoff Heights, New York<small>Affiliate of Weill Cornell</small></div></div>
+          <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/></svg></i><div>Taught at Tufts<small>Residency program</small></div></div>
+          <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></i><div>Certified Invisalign provider<small>CAD/CAM and laser technologies</small></div></div>
+        </div>
+        <div class="langs"><b>EN</b><b>FR</b><b>PL</b><b>ES</b><span>English, French, Polish and Spanish</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <span class="eyebrow rv" style="color:var(--teal-2)"><i></i>Why choose our clinic?</span>
+    <h2 class="rv">Excellent work, <em>warm</em> people.</h2>
+    <div class="wgrid">
+      <div class="w rv"><b>01</b><h3>Excellence in dentistry</h3><p>We are committed to providing excellent work in dentistry and our friendly team devotes a large part of their time to improving their skills in order to guarantee exceptional service from start to finish.</p></div>
+      <div class="w rv"><b>02</b><h3>Warm and welcoming</h3><p>We are committed to providing the best customer service that is warm and welcoming.</p></div>
+      <div class="w rv"><b>03</b><h3>Painless and relaxed</h3><p>We provide customers with a painless, relaxed and rewarding experience, which is why they always come back to us.</p></div>
+    </div>
+    <div class="ctas rv"><a class="btn btn-dark" href="#contact">Book Online <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <aside class="rv">
+      <span class="eyebrow"><i></i>General Questions</span>
+      <h2>Answers to <em>common</em> questions.</h2>
+      <p>Can't find what you're looking for? Call us at 514-697-0444 or write to info@westislandsmiles.com.</p>
+    </aside>
+    <div class="rv">
+      <details open><summary>What can I do if I have sensitive teeth?<i></i></summary><p>If you have sensitive teeth, there are several things you can do to help alleviate the discomfort and sensitivity.</p></details>
+      <details><summary>Why do we need to remove wisdom teeth?<i></i></summary><p>Wisdom teeth, also known as third molars, are located at the back of the mouth and typically emerge in the late teens or early twenties. While some people may have enough room in their mouth for their wisdom teeth to grow in properly, many others may experience problems that require the teeth to be removed.</p></details>
+      <details><summary>What causes TMJ dysfunction?<i></i></summary><p>TMJ stands for temporomandibular joint, which is the joint that connects the jawbone to the skull. TMJ disorder, also known as TMD, refers to a group of conditions that cause pain and dysfunction in the jaw joint and surrounding muscles.</p></details>
+      <details><summary>Symptoms of TMJ disorder<i></i></summary><p>Symptoms of TMJ disorder include pain or tenderness in the jaw joint, clicking or popping sounds when opening or closing the mouth, difficulty chewing or opening the mouth fully, and headaches or earaches.</p></details>
+      <details><summary>How does a nightguard appliance help with TMJ disorder?<i></i></summary><p>A nightguard appliance is a custom-fitted dental device that is worn over the teeth during sleep to help manage symptoms of TMJ disorder. It is typically made of a hard or soft material, and fits over the upper or lower teeth to help reduce the amount of grinding or clenching that occurs during sleep.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="forms" id="forms">
+  <div class="wrap">
+    <div class="fbox rv">
+      <div><span class="eyebrow"><i></i>Patient Forms</span><h2>Save time, <em>fill them in</em> before your visit.</h2><p>Download our forms and post-operative instructions.</p></div>
+      <div class="flist">
+        <a href="http://westislandsmiles.com/wp-content/uploads/2021/05/Confidential-Medical-Dental-Questionnaire-interactive.pdf" target="_blank" rel="noopener"><i>PDF</i>Medical &amp; Dental Questionnaire</a>
+        <a href="http://westislandsmiles.com/wp-content/uploads/2024/03/Root-Canal-post-op-EN.pdf" target="_blank" rel="noopener"><i>PDF</i>Root Canal post-op</a>
+        <a href="http://westislandsmiles.com/wp-content/uploads/2024/03/Home-Whitening-post-op-EN.pdf" target="_blank" rel="noopener"><i>PDF</i>Home Whitening post-op</a>
+        <a href="http://westislandsmiles.com/wp-content/uploads/2024/03/Deep-Scaling-Root-Planning-post-op-EN.pdf" target="_blank" rel="noopener"><i>PDF</i>Deep Scaling post-op</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap cgrid">
+    <div class="ccard rv">
+      <span class="eyebrow" style="color:var(--teal-2)"><i></i>Contact Us</span>
+      <h2>Let's take care of <em>your smile.</em></h2>
+      <p>Simply call, send us an email or fill out the form and we will contact you shortly to confirm your appointment.</p>
+      <table class="hours" id="hours">
+        <tr data-d="1"><td>Monday</td><td>9 am to 5 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>9 am to 5 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>11 am to 7 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>11 am to 7 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>9 am to 4 pm</td></tr>
+        <tr class="closed" data-d="0"><td>Saturday and Sunday</td><td>Closed</td></tr>
+      </table>
+      <div class="cinfo">
+        <a href="tel:+15146970444"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.4 9.8a16 16 0 0 0 5.9 5.9l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i>514-697-0444</a>
+        <a href="mailto:info@westislandsmiles.com"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i>info@westislandsmiles.com</a>
+        <div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></i>802-6600 Trans-Canada Highway, Pointe-Claire, Québec H9R 4S2</div>
+      </div>
+    </div>
+    <form class="form rv" onsubmit="return false">
+      <h3>Book an <em>appointment</em></h3>
+      <p>We'll get back to you shortly to confirm.</p>
+      <div class="row2">
+        <div class="field"><input id="n" placeholder=" " required><label for="n">Name</label></div>
+        <div class="field"><input id="e" type="email" placeholder=" " required><label for="e">Email</label></div>
+      </div>
+      <div class="field"><input id="s" placeholder=" "><label for="s">Subject</label></div>
+      <div class="field"><textarea id="m" placeholder=" "></textarea><label for="m">Message</label></div>
+      <button class="btn btn-dark" type="submit">Send my request <span class="arr">→</span></button>
+      <div class="amen"><span>Parking available</span><span>Accessible location</span><span>Free Wi-Fi</span><span>Bicycle parking</span><span>Child-friendly office</span><span>Debit &amp; credit accepted</span></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo-w"><img src="img/logo.png" alt="Dr. Robert Biskup, Dentiste West Island"></span>
+    <span>© West Island Dental · Pointe-Claire</span>
+    <div class="soc">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.2-.6 1-.6z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.2l-7 8 8.3 10h-6.5l-5-6.2L5 21H1.8l7.5-8.6L1.3 3h6.6l4.6 5.7zM16.4 19.2h1.8L7.6 4.7H5.7z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="a" href="#contact">Book Online</a><a class="b" href="tel:+15146970444" aria-label="Call"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.4 9.8a16 16 0 0 0 5.9 5.9l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a></div>
+
+<button class="totop" type="button" aria-label="Back to top"><svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/></svg><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'), tt=document.querySelector('.totop'), ring=tt.querySelector('circle');
+  function onScroll(){
+    var y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
+    hdr.classList.toggle('solid', y>40);
+    tt.classList.toggle('show', y>700);
+    ring.style.strokeDashoffset=163.4*(1-Math.min(1,y/h));
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  tt.addEventListener('click',function(){ scrollTo({top:0,behavior:'smooth'}); });
+  document.querySelector('.burger').addEventListener('click',function(){ document.body.classList.toggle('open'); document.querySelector('.drawer').style.paddingTop=(hdr.getBoundingClientRect().bottom+28)+'px'; });
+  document.querySelectorAll('.drawer a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('open'); }); });
+
+  // horaires du jour
+  var H={1:['Monday','9 am to 5 pm'],2:['Tuesday','9 am to 5 pm'],3:['Wednesday','11 am to 7 pm'],4:['Thursday','11 am to 7 pm'],5:['Friday','9 am to 4 pm']};
+  var d=new Date().getDay(), t=document.getElementById('today'), th=document.getElementById('todayh');
+  if(H[d]){ t.textContent='Today · '+H[d][1]; th.textContent='Have a question? 514-697-0444'; } else { t.textContent='Closed today'; th.textContent='Back on Monday, 9 am'; }
+  var row=document.querySelector('#hours tr[data-d="'+(H[d]?d:0)+'"]'); if(row){ row.style.background='rgba(127,211,207,.12)'; }
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{threshold:.12,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){
+      var sib=Array.prototype.filter.call(el.parentNode.children,function(c){ return c.classList.contains('rv'); });
+      var i=sib.indexOf(el); if(i>0){ el.style.transitionDelay=(Math.min(i,5)*110)+'ms'; el.addEventListener('transitionend',function(){ el.style.transitionDelay=''; },{once:true}); }
+      io.observe(el);
+    });
+  } else { document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
+
+  // compteurs
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var n=+el.getAttribute('data-count'), start=n>100?n-40:0, t0=null;
+    function step(t){ if(!t0) t0=t; var k=Math.min(1,(t-t0-900)/1600); if(k<0){ el.textContent=start; return requestAnimationFrame(step); } el.textContent=Math.round(start+(n-start)*(1-Math.pow(1-k,3))); if(k<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  });
+
+  // léger effet de profondeur sur le visuel du héros
+  var v=document.querySelector('.visual');
+  if(v && matchMedia('(pointer:fine)').matches){
+    v.addEventListener('mousemove',function(e){ var r=v.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      v.querySelectorAll('.float').forEach(function(f,i){ f.style.translate=(x*(14+i*8))+'px '+(y*(14+i*8))+'px'; }); });
+    v.addEventListener('mouseleave',function(){ v.querySelectorAll('.float').forEach(function(f){ f.style.translate=''; }); });
+  }
+})();
+</script>
+</body>
+</html>
