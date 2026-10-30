@@ -5,264 +5,272 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Vitalunch · Maquette de la page d'atterrissage</title>
-<meta name="description" content="Un panier de collations santé en consignation dans vos bureaux. Service clé en main, 0 $ pour l'employeur.">
+<meta name="description" content="Un panier de collations en consignation, directement dans vos bureaux. Service clé en main, aucun frais pour l'employeur.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 <style>
-:root{--orange:#FF6B35;--orange2:#FF8A5C;--orangeD:#E2541F;--forest:#123329;--forest2:#1C4A3C;--sage:#CFE5C9;--mint:#EAF4E6;--cream:#FFF8F0;--sand:#F7E9DA;--ink:#14211C;--muted:#5B6B63;--line:rgba(18,51,41,.12)}
+:root{--navy:#060644;--navy2:#13136A;--navy3:#1E1E85;--orange:#FF5100;--orange2:#FF6B35;--orangeL:#FFE3D3;--cream:#FFF6DB;--cream2:#FFF8F0;--ink:#0E0E3A;--muted:#5D5D7A;--line:rgba(6,6,68,.1)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream2);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.04;margin:0;letter-spacing:-.025em}
-h2{font-size:clamp(2.1rem,4.4vw,3.5rem)}
-.hand{font-family:Caveat,cursive;font-weight:700;color:var(--orange);font-size:1.7rem;line-height:1}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--forest2)}
-.kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,107,53,.2)}
-.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.05;margin:0;letter-spacing:-.025em;color:var(--navy)}
+h2{font-size:clamp(2.1rem,4.3vw,3.4rem)}
+.pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,81,0,.1);color:var(--orange);border:1px solid rgba(255,81,0,.25)}
+.pill svg{width:16px;height:16px}
+.pill.nv{background:rgba(6,6,68,.07);color:var(--navy);border-color:rgba(6,6,68,.15)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:800;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
 .btn:hover{transform:translateY(-2px)}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-or{background:var(--orange);color:#fff;box-shadow:0 16px 34px -14px rgba(255,107,53,.95);position:relative;overflow:hidden}
-.btn-or:hover{background:var(--orangeD)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-or{background:var(--orange);color:#fff;box-shadow:0 16px 34px -14px rgba(255,81,0,.95);position:relative;overflow:hidden}
+.btn-or:hover{background:#E84900}
 .btn-or:before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:shine 4.5s infinite}
 @keyframes shine{0%,70%{left:-60%}100%{left:130%}}
-.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
-.btn-ghost:hover{background:rgba(255,255,255,.18)}
-.btn-dark{background:var(--forest);color:#fff}
-.btn-dark:hover{background:var(--forest2)}
+.btn-wh{background:#fff;color:var(--navy)}
+.btn-wh:hover{background:var(--cream)}
+.btn-nv{background:var(--navy);color:#fff}
+.btn-nv:hover{background:var(--navy3)}
+.btn-line{border:2px solid var(--navy);color:var(--navy);background:transparent}
+.btn-line:hover{background:var(--navy);color:#fff}
 
-.ribbon{background:var(--forest);color:rgba(255,255,255,.78);font-size:.78rem;text-align:center;padding:8px 12px;position:relative;z-index:7}
-.ribbon b{color:var(--orange2)}
+.ribbon{background:var(--orange);color:#fff;font-size:.8rem;font-weight:600;text-align:center;padding:8px 12px;position:relative;z-index:7}
+.ribbon b{font-weight:800}
 
 /* en-tête */
-.top{position:absolute;top:35px;left:0;right:0;z-index:6;transition:background .35s,box-shadow .35s}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px;transition:padding .3s}
-.top.fixed{position:fixed;top:0;background:rgba(18,51,41,.93);backdrop-filter:blur(14px);box-shadow:0 12px 30px -16px rgba(0,0,0,.6);animation:slideDown .35s ease}
-.top.fixed .wrap{padding-top:11px;padding-bottom:11px}
+.top{position:absolute;top:37px;left:0;right:0;z-index:6}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:18px;padding-bottom:18px;transition:padding .3s}
+.top.fixed{position:fixed;top:0;background:rgba(6,6,68,.94);backdrop-filter:blur(14px);box-shadow:0 12px 30px -16px rgba(0,0,0,.6);animation:slideDown .35s ease}
+.top.fixed .wrap{padding-top:10px;padding-bottom:10px}
+.top.fixed .brand img{height:44px}
 @keyframes slideDown{from{transform:translateY(-100%)}to{transform:none}}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.65rem;letter-spacing:-.035em}
-.brand .mk{width:40px;height:40px;border-radius:13px;background:var(--orange);display:grid;place-items:center;box-shadow:0 8px 20px -8px rgba(255,107,53,.9);transform:rotate(-6deg);transition:transform .4s}
-.brand:hover .mk{transform:rotate(6deg) scale(1.05)}
-.brand .mk svg{width:23px;height:23px}
-.brand span i{font-style:normal;color:var(--orange2)}
+.brand img{height:64px;width:auto;transition:height .3s}
 .nav{display:flex;align-items:center;gap:30px}
-.nav a.l{white-space:nowrap;color:rgba(255,255,255,.9);text-decoration:none;font-weight:500;font-size:.96rem;position:relative;padding:4px 0}
-.nav a.l:after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;border-radius:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a.l{white-space:nowrap;color:rgba(255,255,255,.88);text-decoration:none;font-weight:700;font-size:.96rem;position:relative;padding:4px 0}
+.nav a.l:after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;border-radius:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav a.l:hover:after,.nav a.l.on:after{transform:scaleX(1)}
 .right{display:flex;align-items:center;gap:10px}
 .btn-sm{padding:12px 22px;font-size:.92rem}
-.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);backdrop-filter:blur(6px);cursor:pointer;position:relative;z-index:8}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);cursor:pointer;position:relative;z-index:8}
 .burger i{position:absolute;left:15px;right:15px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
 .burger i:nth-child(1){top:17px}.burger i:nth-child(2){top:23px}.burger i:nth-child(3){top:29px}
 body.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
 body.menu-open .burger i:nth-child(2){opacity:0}
 body.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.panel{position:fixed;inset:0;z-index:5;background:radial-gradient(circle at 85% 10%,rgba(255,107,53,.35),transparent 45%),linear-gradient(160deg,var(--forest),#0b2219);display:flex;flex-direction:column;justify-content:center;padding:110px 32px 40px;opacity:0;pointer-events:none;transition:opacity .35s}
+.panel{position:fixed;inset:0;z-index:5;background:radial-gradient(circle at 85% 8%,rgba(255,81,0,.4),transparent 45%),linear-gradient(160deg,var(--navy),#03032c);display:flex;flex-direction:column;justify-content:center;padding:110px 32px 40px;opacity:0;pointer-events:none;transition:opacity .35s}
 body.menu-open .panel{opacity:1;pointer-events:auto}
 body.menu-open{overflow:hidden}
-.panel a{color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:2.2rem;line-height:1.2;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);transform:translateY(16px);opacity:0;transition:transform .45s,opacity .45s}
+.panel a{color:#fff;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:2.1rem;line-height:1.2;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);transform:translateY(16px);opacity:0;transition:transform .45s,opacity .45s}
 body.menu-open .panel a{transform:none;opacity:1}
 body.menu-open .panel a:nth-child(2){transition-delay:.05s}body.menu-open .panel a:nth-child(3){transition-delay:.1s}body.menu-open .panel a:nth-child(4){transition-delay:.15s}body.menu-open .panel a:nth-child(5){transition-delay:.2s}body.menu-open .panel a:nth-child(6){transition-delay:.25s}
-.panel .btn{margin-top:30px;font-size:1.05rem;border:0;font-family:"DM Sans",sans-serif}
+.panel .btn{margin-top:30px;font-family:Nunito,sans-serif;font-size:1.05rem;border:0}
 
 /* héros */
-.hero{position:relative;min-height:96vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--forest)}
-.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 60%;animation:kenburns 24s ease-out forwards;transform-origin:72% 62%}
-@keyframes kenburns{from{transform:scale(1.15)}to{transform:scale(1)}}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,32,25,.93) 0%,rgba(10,32,25,.78) 38%,rgba(10,32,25,.18) 72%,rgba(10,32,25,.05) 100%),linear-gradient(180deg,rgba(10,32,25,.55) 0%,transparent 28%,transparent 70%,rgba(10,32,25,.6) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-top:160px;padding-bottom:110px;width:100%}
-.hero .hand{color:var(--orange2);font-size:2rem;display:block;margin-bottom:14px;transform:rotate(-2deg);transform-origin:left}
-.hero h1{font-size:clamp(2.6rem,5.7vw,4.9rem);max-width:16ch}
-.hero h1 .hl{position:relative;white-space:nowrap;color:#fff}
-.hero h1 .hl svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.38em;color:var(--orange);z-index:-1}
-.hero h1 .hl svg path{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.2s .7s ease forwards}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:radial-gradient(circle at 78% 40%,rgba(255,81,0,.28),transparent 42%),radial-gradient(circle at 10% 90%,rgba(30,30,133,.9),transparent 50%),var(--navy)}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero .wrap{position:relative;z-index:2;padding-top:170px;padding-bottom:110px;width:100%;display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.6rem,5.2vw,4.6rem);margin:24px 0 0}
+.hero h1 .or{color:var(--orange2)}
+.hero h1 .ul{position:relative;display:inline-block;z-index:0}
+.hero h1 .ul svg{position:absolute;left:-1%;bottom:-.08em;width:102%;height:.32em;color:var(--orange);z-index:-1;overflow:visible}
+.hero h1 .ul svg path{stroke-dasharray:640;stroke-dashoffset:640;animation:draw 1.3s .8s cubic-bezier(.6,0,.3,1) forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.hero p.lead{font-size:clamp(1.06rem,1.6vw,1.24rem);max-width:540px;margin:26px 0 36px;color:rgba(255,255,255,.88)}
+.hero p.lead{font-size:clamp(1.08rem,1.6vw,1.26rem);max-width:540px;margin:26px 0 34px;color:rgba(255,255,255,.85)}
+.hero .pill{background:rgba(255,81,0,.16);border-color:rgba(255,107,53,.4);color:var(--orange2)}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px;max-width:640px}
-.facts span{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);padding:9px 16px;border-radius:999px;font-weight:500;font-size:.9rem}
-.facts svg{width:16px;height:16px;color:var(--sage)}
-.price-badge{position:absolute;right:max(24px,calc((100vw - 1200px)/2 + 24px));bottom:110px;z-index:3;background:rgba(255,255,255,.96);color:var(--ink);border-radius:24px;padding:20px 24px 18px;box-shadow:0 30px 60px -25px rgba(0,0,0,.6);display:flex;align-items:center;gap:16px;animation:float 6s ease-in-out infinite}
-.price-badge b{font-family:"Bricolage Grotesque",sans-serif;font-size:3.1rem;line-height:.9;color:var(--orange);letter-spacing:-.04em}
-.price-badge small{display:block;font-size:.88rem;line-height:1.35;color:var(--muted);max-width:150px}
-.price-badge small strong{color:var(--ink);display:block;font-size:.98rem}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.facts span{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:9px 16px;border-radius:999px;font-weight:700;font-size:.9rem;color:rgba(255,255,255,.92)}
+.facts svg{width:16px;height:16px;color:var(--orange2)}
+.shot{position:relative}
+.shot .frame{border-radius:30px;overflow:hidden;box-shadow:0 50px 90px -35px rgba(0,0,0,.8),0 0 0 8px rgba(255,255,255,.06);aspect-ratio:3/4;transform:rotate(2deg);transition:transform .6s}
+.shot:hover .frame{transform:rotate(0)}
+.shot .frame img{width:100%;height:100%;object-fit:cover;animation:kenburns 24s ease-out forwards;transform-origin:50% 30%}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1)}}
+.shot .badge{position:absolute;left:-34px;bottom:46px;background:#fff;color:var(--navy);border-radius:22px;padding:16px 22px;box-shadow:0 30px 60px -25px rgba(0,0,0,.65);display:flex;align-items:center;gap:14px;animation:float 6s ease-in-out infinite}
+.shot .badge b{font-family:"Bricolage Grotesque",sans-serif;font-size:2.7rem;line-height:.9;color:var(--orange);letter-spacing:-.04em}
+.shot .badge small{display:block;font-size:.88rem;line-height:1.3;color:var(--muted);font-weight:600}
+.shot .badge small strong{color:var(--navy);display:block;font-size:.98rem;font-weight:800}
+.shot .qr{position:absolute;right:-22px;top:40px;width:84px;height:84px;border-radius:22px;background:var(--orange);display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(255,81,0,.9);animation:float 7s 1s ease-in-out infinite}
+.shot .qr svg{width:44px;height:44px;color:#fff}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;width:26px;height:42px;border:2px solid rgba(255,255,255,.55);border-radius:20px}
+.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:3;width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:20px}
 .scroll:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:sc 1.8s infinite}
 @keyframes sc{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
 
-/* sections */
-section{position:relative}
-.pad{padding:120px 0}
-.center{text-align:center}
-.intro{padding:110px 0 70px}
-.intro h2{max-width:20ch;margin:18px auto 22px}
-.intro h2 em{font-style:normal;color:var(--orange)}
-.intro p{max-width:680px;margin:0 auto;color:var(--muted);font-size:1.13rem}
-.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:20px 0}
-.marquee .track{display:flex;gap:46px;width:max-content;animation:mq 34s linear infinite}
-.marquee span{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.35rem;color:var(--forest);white-space:nowrap;display:flex;align-items:center;gap:46px}
-.marquee span:after{content:"";width:9px;height:9px;border-radius:50%;background:var(--orange)}
+/* bandeau défilant */
+.mq-wrap{overflow:hidden;margin-top:-30px;padding:16px 0;position:relative;z-index:3}
+.marquee{overflow:hidden;background:var(--orange);padding:18px 0;transform:rotate(-1.2deg);margin:0 -20px;position:relative;box-shadow:0 20px 40px -25px rgba(255,81,0,.8)}
+.marquee .track{display:flex;width:max-content;animation:mq 36s linear infinite}
+.marquee span{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:34px;padding-right:34px}
+.marquee span:after{content:"";width:10px;height:10px;border-radius:50%;background:var(--navy)}
 @keyframes mq{to{transform:translateX(-50%)}}
 
+section{position:relative}
+.pad{padding:120px 0}
+.head{text-align:center;max-width:720px;margin:0 auto 60px}
+.head h2{margin:16px 0 14px}
+.head p{color:var(--muted);font-size:1.12rem;margin:0}
+
 /* étapes */
-.steps-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:60px}
-.steps-head h2{max-width:14ch;margin-top:16px}
-.steps-head p{max-width:420px;color:var(--muted);font-size:1.08rem;margin:0}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
-.step{background:#fff;border:1px solid var(--line);border-radius:28px;padding:36px 32px 34px;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
-.step:hover{transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(18,51,41,.45);border-color:transparent}
-.step .num{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:6rem;line-height:.8;color:var(--mint);position:absolute;right:20px;top:22px;transition:color .35s}
-.step:hover .num{color:#FFE1D4}
-.step .ic{width:64px;height:64px;border-radius:20px;background:var(--forest);color:#fff;display:grid;place-items:center;margin-bottom:26px;position:relative;transition:background .35s,transform .35s}
-.step:hover .ic{background:var(--orange);transform:rotate(-6deg)}
+.how{background:var(--cream2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:#fff;border-radius:28px;padding:34px 26px 30px;position:relative;overflow:hidden;box-shadow:0 20px 50px -38px rgba(6,6,68,.55);transition:transform .35s,box-shadow .35s}
+.step:hover{transform:translateY(-8px);box-shadow:0 36px 70px -36px rgba(6,6,68,.6)}
+.step:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.step:hover:after{transform:scaleX(1)}
+.step .ic{width:66px;height:66px;border-radius:50%;background:rgba(255,81,0,.1);color:var(--orange);display:grid;place-items:center;margin-bottom:22px;transition:background .35s,color .35s,transform .35s}
+.step:hover .ic{background:var(--orange);color:#fff;transform:rotate(-8deg) scale(1.05)}
 .step .ic svg{width:30px;height:30px}
-.step h3{font-size:1.55rem;margin-bottom:10px;position:relative}
-.step p{margin:0;color:var(--muted);position:relative}
-.step .tag{display:inline-block;margin-top:18px;font-size:.8rem;font-weight:700;color:var(--forest2);background:var(--mint);padding:6px 12px;border-radius:999px;position:relative}
+.step .n{font-size:.8rem;font-weight:800;color:var(--orange);letter-spacing:.08em;text-transform:uppercase}
+.step h3{font-size:1.45rem;margin:6px 0 10px}
+.step p{margin:0;color:var(--muted)}
+.center-cta{text-align:center;margin-top:50px}
 
 /* avantages */
-.benefits{background:var(--forest);color:#fff;overflow:hidden}
-.benefits:before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.28),transparent 65%);right:-200px;top:-220px}
-.benefits .kicker{color:var(--sage)}
-.benefits h2{margin:16px 0 56px;max-width:18ch}
-.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;position:relative}
-.bcard{border-radius:30px;padding:42px 40px;position:relative}
-.bcard.emp{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
-.bcard.ent{background:var(--orange);color:#fff;box-shadow:0 40px 80px -40px rgba(255,107,53,.8)}
-.bcard .who{display:flex;align-items:center;gap:14px;margin-bottom:26px}
-.bcard .who i{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.14)}
-.bcard.ent .who i{background:rgba(255,255,255,.22)}
+.benef{background:#fff}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.bcard{border-radius:32px;padding:42px 40px;position:relative;overflow:hidden}
+.bcard.emp{background:var(--cream2);border:1px solid rgba(255,81,0,.12)}
+.bcard.ent{background:var(--navy);color:#fff}
+.bcard.ent:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,81,0,.35),transparent 65%);right:-120px;top:-140px}
+.bcard .who{display:flex;align-items:center;gap:14px;margin-bottom:24px;position:relative}
+.bcard .who i{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(255,81,0,.12);color:var(--orange)}
+.bcard.ent .who i{background:rgba(255,255,255,.12);color:#fff}
 .bcard .who svg{width:26px;height:26px}
 .bcard h3{font-size:1.75rem}
-.bcard ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
-.bcard li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid rgba(255,255,255,.14);font-size:1.06rem}
-.bcard.ent li{border-top-color:rgba(255,255,255,.3)}
-.bcard li svg{width:22px;height:22px;flex:none;margin-top:2px;color:var(--sage)}
-.bcard.ent li svg{color:#fff}
-.bcard li b{font-weight:700}
+.bcard.ent h3{color:#fff}
+.bcard ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;position:relative}
+.bcard li{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:18px;background:#fff;font-weight:700;font-size:1.04rem;box-shadow:0 10px 24px -20px rgba(6,6,68,.5);transition:transform .25s}
+.bcard li:hover{transform:translateX(6px)}
+.bcard.ent li{background:rgba(255,255,255,.07);box-shadow:none;border:1px solid rgba(255,255,255,.1)}
+.bcard li i{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;flex:none;background:var(--orange);color:#fff}
+.bcard.ent li i{background:#fff;color:var(--navy)}
+.bcard li svg{width:20px;height:20px}
 
-/* produits */
-.split{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
-.split.rev{grid-template-columns:1fr 1.05fr}
-.split.rev .media{order:2}
-.media{position:relative}
-.media .ph{border-radius:32px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(18,51,41,.55);aspect-ratio:4/3.3}
-.media .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
-.media:hover .ph img{transform:scale(1.04)}
-.media .sticker{position:absolute;left:-26px;bottom:34px;background:#fff;border-radius:20px;padding:16px 20px;box-shadow:0 24px 50px -24px rgba(18,51,41,.5);display:flex;align-items:center;gap:12px;font-weight:700;max-width:250px;line-height:1.3}
-.media .sticker i{width:44px;height:44px;border-radius:14px;background:var(--mint);display:grid;place-items:center;flex:none;color:var(--forest)}
-.media .sticker svg{width:22px;height:22px}
-.media .blob{position:absolute;width:180px;height:180px;border-radius:50%;background:var(--sage);right:-40px;top:-40px;z-index:-1}
-.split h2{margin:16px 0 20px}
-.split p.lead{color:var(--muted);font-size:1.1rem;margin:0 0 26px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:500;font-size:.95rem;transition:background .25s,color .25s,border-color .25s,transform .25s}
-.chip:hover{background:var(--forest);color:#fff;border-color:var(--forest);transform:translateY(-2px)}
-.chip svg{width:16px;height:16px;color:var(--orange)}
-.meals{background:var(--sand)}
-.diet{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 28px}
-.diet span{background:#fff;border-radius:16px;padding:14px 12px;text-align:center;font-weight:700;font-size:.95rem;border:1px solid rgba(0,0,0,.04);transition:transform .25s,box-shadow .25s}
-.diet span:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(18,51,41,.5)}
-.diet span small{display:block;font-weight:500;color:var(--muted);font-size:.75rem;margin-bottom:2px;letter-spacing:.08em;text-transform:uppercase}
-.vac{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:0 0 30px;padding:0;list-style:none}
-.vac li{display:flex;align-items:center;gap:10px;font-weight:500}
-.vac li svg{width:20px;height:20px;color:var(--forest2);flex:none}
-.partner{font-size:.92rem;color:var(--muted)}
-.partner b{color:var(--ink)}
+/* collations */
+.snacks{background:var(--cream)}
+.sgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.sn{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 18px 40px -30px rgba(6,6,68,.55);transition:transform .35s,box-shadow .35s}
+.sn:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 30px 60px -30px rgba(6,6,68,.6)}
+.sn .im{aspect-ratio:1;overflow:hidden;background:var(--cream2)}
+.sn img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.sn:hover img{transform:scale(1.07)}
+.sn p{margin:0;padding:14px 10px;text-align:center;font-weight:800;color:var(--navy)}
+.note{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:.95rem;margin-top:34px;text-align:center}
+.note svg{width:18px;height:18px;color:var(--orange);flex:none}
 
-/* famille */
-.family{min-height:640px;display:flex;align-items:center;color:#fff;overflow:hidden}
-.family img.bg{position:absolute;inset:0;width:100%;height:115%;object-fit:cover;top:-7%}
-.family:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,32,25,.15) 0%,rgba(10,32,25,.6) 38%,rgba(10,32,25,.9) 58%,rgba(10,32,25,.95) 100%)}
-.family .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end;width:100%}
-.fcard{max-width:560px;padding:20px 0}
-.fcard .hand{color:var(--orange2);font-size:2rem}
-.fcard blockquote{margin:14px 0 22px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.12;letter-spacing:-.02em}
-.fcard blockquote em{font-style:normal;color:var(--orange2)}
-.fcard p{color:rgba(255,255,255,.85);font-size:1.08rem;margin:0 0 26px}
-.names{display:flex;gap:10px;flex-wrap:wrap}
-.names span{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);border-radius:999px;padding:6px 16px 6px 6px;font-weight:700}
-.names span i{width:32px;height:32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-style:normal;font-family:"Bricolage Grotesque",sans-serif}
-
-/* avis + faq */
-.proof{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
-.review{background:#fff;border-radius:30px;padding:44px 40px;border:1px solid var(--line);position:sticky;top:110px;box-shadow:0 30px 60px -40px rgba(18,51,41,.4)}
-.review .q{width:58px;height:58px;border-radius:18px;background:var(--orange);display:grid;place-items:center;margin-bottom:24px}
-.review .q svg{width:28px;height:28px;color:#fff}
-.stars{display:flex;gap:3px;color:#F5A623;margin-bottom:16px}
+/* témoignages */
+.reviews{background:var(--navy);color:#fff;overflow:hidden}
+.reviews:before{content:"";position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,81,0,.22),transparent 65%);left:-260px;bottom:-320px}
+.reviews h2{color:#fff}
+.reviews .head p{color:rgba(255,255,255,.65)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative}
+.rv-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:34px 30px;display:flex;flex-direction:column;transition:transform .35s,background .35s}
+.rv-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.stars{display:flex;gap:3px;color:var(--orange2);margin-bottom:18px}
 .stars svg{width:20px;height:20px}
-.review p{font-family:"Bricolage Grotesque",sans-serif;font-weight:500;font-size:1.5rem;line-height:1.3;margin:0 0 24px;letter-spacing:-.01em}
-.review .by{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid var(--line)}
-.review .by i{width:46px;height:46px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-style:normal;font-weight:800;color:var(--forest)}
-.review .by b{display:block}
-.review .by small{color:var(--muted)}
-.faq h2{margin:16px 0 34px}
+.rv-card blockquote{margin:0 0 24px;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.9);flex:1}
+.rv-card .by{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12)}
+.rv-card .by i{width:44px;height:44px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font-style:normal;font-weight:800}
+.rv-card .by b{display:block}
+.rv-card .by small{color:rgba(255,255,255,.6)}
+
+/* équipe */
+.team .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
+.team .ph{position:relative}
+.team .ph .fr{border-radius:32px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(6,6,68,.6);aspect-ratio:4/4.4}
+.team .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1.2s}
+.team .ph:hover img{transform:scale(1.04)}
+.team .ph:before{content:"";position:absolute;inset:26px -26px -26px 26px;border-radius:32px;background:var(--orange);z-index:-1}
+.team .ph .stamp{position:absolute;right:-30px;top:30px;background:var(--navy);color:#fff;border-radius:50%;width:124px;height:124px;display:grid;place-items:center;text-align:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:.95rem;line-height:1.1;box-shadow:0 20px 40px -18px rgba(6,6,68,.8);animation:spin 26s linear infinite}
+.team .ph .stamp span{display:block;padding:10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.team h2{margin:16px 0 8px}
+.team .sub{font-size:1.18rem;color:var(--muted);margin:0 0 26px;font-weight:600}
+.team p.t{font-size:1.12rem;margin:0 0 18px}
+.team strong{color:var(--navy)}
+.sign{display:flex;align-items:center;gap:12px;margin-top:28px}
+.sign:before{content:"";width:48px;height:4px;border-radius:4px;background:var(--orange)}
+.sign span{color:var(--navy);font-weight:800;font-style:italic}
+
+/* repas */
+.meals{background:var(--cream2)}
+.mcard{display:grid;grid-template-columns:1fr 1.2fr;background:#fff;border-radius:34px;overflow:hidden;box-shadow:0 40px 80px -45px rgba(6,6,68,.55);max-width:1000px;margin:0 auto}
+.mcard .lg{display:grid;place-items:center;padding:50px;background:#fff;border-right:1px solid var(--line)}
+.mcard .lg img{width:100%;max-width:320px;height:auto;transition:transform .5s}
+.mcard:hover .lg img{transform:scale(1.05)}
+.mcard .tx{padding:46px 44px}
+.mcard h3{font-size:2rem;margin-bottom:12px}
+.mcard p{color:var(--muted);margin:0 0 22px;font-size:1.05rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tags span{background:rgba(255,81,0,.1);color:var(--orange);font-weight:800;font-size:.88rem;padding:8px 14px;border-radius:999px;transition:background .25s,color .25s}
+.tags span:hover{background:var(--orange);color:#fff}
+
+.faq{background:#fff}
+.faq .wrap{max-width:860px}
 .qa{border-bottom:1px solid var(--line)}
-.qa button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.22rem;line-height:1.3;letter-spacing:-.01em}
+.qa button{all:unset;box-sizing:border-box;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;line-height:1.3;color:var(--navy)}
 .qa button:focus-visible{outline:2px solid var(--orange);outline-offset:4px;border-radius:6px}
-.qa button i{width:38px;height:38px;border-radius:50%;background:var(--mint);flex:none;position:relative;transition:background .3s,transform .35s}
-.qa button i:before,.qa button i:after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;margin:-1px 0 0 -7px;background:var(--forest);border-radius:2px;transition:transform .35s,background .3s}
+.qa button i{width:40px;height:40px;border-radius:50%;background:rgba(255,81,0,.1);flex:none;position:relative;transition:background .3s,transform .35s}
+.qa button i:before,.qa button i:after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;margin:-1px 0 0 -7px;background:var(--orange);border-radius:2px;transition:transform .35s,background .3s}
 .qa button i:after{transform:rotate(90deg)}
 .qa.open button i{background:var(--orange);transform:rotate(180deg)}
 .qa.open button i:before,.qa.open button i:after{background:#fff}
 .qa.open button i:after{transform:rotate(0)}
 .qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
 .qa.open .ans{grid-template-rows:1fr}
-.qa .ans > div{overflow:hidden}
-.qa .ans p{margin:0 0 24px;color:var(--muted);font-size:1.05rem;max-width:60ch}
-
-/* appel final + formulaire */
-.final{color:#fff;overflow:hidden;padding:130px 0}
-.final img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.final:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,32,25,.96) 0%,rgba(10,32,25,.86) 50%,rgba(226,84,31,.75) 100%)}
-.final .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.final h2{font-size:clamp(2.3rem,4.6vw,3.8rem);margin:16px 0 20px}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{margin:0 0 24px;color:var(--muted);font-size:1.06rem}
+/* formulaire */
+.final{background:radial-gradient(circle at 15% 20%,rgba(255,81,0,.3),transparent 40%),radial-gradient(circle at 90% 90%,rgba(30,30,133,.9),transparent 50%),var(--navy);color:#fff;padding:120px 0}
+.final .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.final h2{color:#fff;font-size:clamp(2.3rem,4.4vw,3.6rem);margin:18px 0 18px}
 .final h2 em{font-style:normal;color:var(--orange2)}
-.final .kicker{color:var(--sage)}
-.final p.lead{color:rgba(255,255,255,.85);font-size:1.12rem;margin:0 0 30px;max-width:460px}
-.final .mail{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem;padding:10px 0;border-bottom:2px solid var(--orange)}
+.final p.lead{color:rgba(255,255,255,.78);font-size:1.15rem;margin:0 0 30px}
+.final .pill{background:rgba(255,81,0,.16);border-color:rgba(255,107,53,.4);color:var(--orange2)}
+.final .mail{display:inline-flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800;font-size:1.12rem;padding:8px 0;border-bottom:2px solid var(--orange)}
 .final .mail svg{width:22px;height:22px;color:var(--orange2)}
-.checks{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:10px}
-.checks li{display:flex;gap:12px;align-items:center;font-weight:500}
-.checks li svg{width:22px;height:22px;color:var(--orange2);flex:none}
-form.lead-form{background:#fff;color:var(--ink);border-radius:30px;padding:38px 36px;box-shadow:0 50px 90px -40px rgba(0,0,0,.7)}
-form.lead-form h3{font-size:1.65rem;margin-bottom:6px}
-form.lead-form > p{margin:0 0 22px;color:var(--muted);font-size:.95rem}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.final .mini{display:flex;gap:12px;align-items:center;margin-top:34px}
+.final .mini img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:3px solid var(--orange)}
+.final .mini p{margin:0;color:rgba(255,255,255,.8);font-size:.95rem;line-height:1.4}
+.final .mini b{color:#fff}
+form.lead-form{background:#fff;color:var(--ink);border-radius:30px;padding:38px 36px;box-shadow:0 50px 90px -40px rgba(0,0,0,.75)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .fg .full{grid-column:1/-1}
-label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;color:var(--forest)}
-input,select{width:100%;font:inherit;font-size:1rem;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink);transition:border-color .2s,box-shadow .2s,background .2s}
-input:focus,select:focus{outline:0;border-color:var(--orange);background:#fff;box-shadow:0 0 0 4px rgba(255,107,53,.15)}
-form.lead-form .btn{width:100%;margin-top:20px;font-size:1.05rem;padding:18px}
-form.lead-form .fine{font-size:.8rem;color:var(--muted);text-align:center;margin:14px 0 0}
-.ok{display:none;text-align:center;padding:30px 0}
-.ok i{width:70px;height:70px;border-radius:50%;background:var(--mint);display:grid;place-items:center;margin:0 auto 18px;color:var(--forest)}
-.ok i svg{width:34px;height:34px}
+label{display:block;font-size:.85rem;font-weight:800;margin-bottom:6px;color:var(--navy)}
+input,textarea{width:100%;font:inherit;font-size:1rem;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--cream2);color:var(--ink);transition:border-color .2s,box-shadow .2s,background .2s}
+textarea{resize:vertical;min-height:96px}
+input:focus,textarea:focus{outline:0;border-color:var(--orange);background:#fff;box-shadow:0 0 0 4px rgba(255,81,0,.14)}
+form.lead-form .btn{width:100%;margin-top:22px;font-size:1.06rem;padding:18px;white-space:normal}
+form.lead-form .fine{font-size:.82rem;color:var(--muted);text-align:center;margin:14px 0 0}
+.ok{display:none;text-align:center;padding:40px 0}
+.ok i{width:74px;height:74px;border-radius:50%;background:rgba(255,81,0,.12);display:grid;place-items:center;margin:0 auto 18px;color:var(--orange)}
+.ok i svg{width:36px;height:36px}
 form.sent .fields{display:none}
 form.sent .ok{display:block}
 
 /* pied */
-footer{background:#0b2219;color:rgba(255,255,255,.7);padding:70px 0 40px}
-footer .row{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
-footer .brand{font-size:1.5rem}
-footer p{margin:14px 0 0;max-width:340px}
-footer nav{display:flex;gap:26px;flex-wrap:wrap}
-footer nav a{text-decoration:none;color:rgba(255,255,255,.85)}
-footer nav a:hover{color:var(--orange2)}
-footer .bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;font-size:.85rem}
+footer{background:#03032c;color:rgba(255,255,255,.65);padding:60px 0 36px}
+footer .row{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .id{display:flex;align-items:center;gap:18px}
+footer .id img{height:70px;width:auto}
+footer .id b{color:#fff;display:block;font-size:1.05rem}
+footer .links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+footer .links a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:rgba(255,255,255,.75);transition:color .2s}
+footer .links a:hover{color:var(--orange2)}
+footer .links svg{width:20px;height:20px}
+footer .bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;font-size:.85rem}
 footer .bottom a{color:var(--orange2);text-decoration:none}
 
 /* barre mobile + retour en haut */
-.mbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;gap:8px;padding:8px;border-radius:999px;background:rgba(18,51,41,.95);backdrop-filter:blur(12px);box-shadow:0 18px 40px -14px rgba(0,0,0,.6);transform:translateY(130%);transition:transform .4s}
+.mbar{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;padding:8px;border-radius:999px;background:rgba(6,6,68,.95);backdrop-filter:blur(12px);box-shadow:0 18px 40px -14px rgba(0,0,0,.6);transform:translateY(130%);transition:transform .4s}
 .mbar.show{transform:none}
-.mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;color:#fff}
-.mbar a.or{background:var(--orange)}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 10px;border-radius:999px;text-decoration:none;font-weight:800;font-size:1rem;color:#fff;background:var(--orange)}
 .mbar svg{width:18px;height:18px}
-.totop{position:fixed;right:24px;bottom:24px;z-index:9;width:56px;height:56px;border-radius:50%;background:var(--forest);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s,background .3s;box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
+.totop{position:fixed;right:24px;bottom:24px;z-index:9;width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s,background .3s;box-shadow:0 14px 30px -12px rgba(0,0,0,.55)}
 .totop.show{opacity:1;transform:none;pointer-events:auto}
 .totop:hover{background:var(--orange)}
 .totop svg.ring{position:absolute;inset:0;width:56px;height:56px;transform:rotate(-90deg)}
@@ -273,57 +281,57 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
 /* apparitions */
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-@media (max-width:1100px){
- .price-badge{display:none}
+@media (max-width:1080px){
+ .steps{grid-template-columns:repeat(2,1fr)}
+ .sgrid{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:980px){
  .nav,.right .btn-sm{display:none}
  .burger{display:block}
- .steps{grid-template-columns:1fr}
- .bgrid,.split,.split.rev,.proof,.final .wrap{grid-template-columns:1fr}
- .split.rev .media{order:0}
- .split{gap:50px}
- .review{position:relative;top:0}
- .family{min-height:560px}
- .family:after{background:linear-gradient(180deg,rgba(10,32,25,.35) 0%,rgba(10,32,25,.9) 60%)}
- .family .wrap{justify-content:flex-start;align-items:flex-end}
+ .hero .wrap{grid-template-columns:1fr;gap:50px;padding-top:150px}
+ .shot{max-width:440px;margin:0 auto;width:100%}
+ .bgrid,.team .grid,.final .grid,.rgrid{grid-template-columns:1fr}
+ .mcard{grid-template-columns:1fr}
+ .mcard .lg{border-right:0;border-bottom:1px solid var(--line);padding:36px}
+ .team .grid{gap:60px}
  .pad{padding:90px 0}
 }
 @media (max-width:640px){
  .wrap{padding:0 20px}
  .ribbon{font-size:.72rem}
- .top{top:46px}
- .hero{min-height:100svh}
- .hero img.bg{object-position:74% 60%}
- .hero:after{background:linear-gradient(180deg,rgba(10,32,25,.7) 0%,rgba(10,32,25,.82) 45%,rgba(10,32,25,.92) 100%)}
- .hero .wrap{padding-top:150px;padding-bottom:90px}
- .hero h1 .hl{white-space:normal}
+ .top{top:50px}
+ .brand img{height:46px}
+ .hero .wrap{padding-top:140px;padding-bottom:80px}
  .cta-row .btn{width:100%}
- .facts{margin-top:32px}
+ .btn{white-space:normal;text-align:center}
+ .center-cta .btn{width:100%}
  .facts span{font-size:.82rem;padding:8px 13px}
+ .shot .badge{left:-6px;bottom:24px;padding:12px 16px}
+ .shot .badge b{font-size:2.1rem}
+ .shot .qr{right:-6px;width:66px;height:66px}
+ .shot .qr svg{width:34px;height:34px}
  .scroll{display:none}
- .intro .kicker:before{display:none}
- .bcard{padding:32px 24px}
- .media .sticker{left:12px;bottom:12px;font-size:.9rem}
- .media .blob{display:none}
- .diet{grid-template-columns:repeat(2,1fr)}
- .vac{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr}
+ .sgrid{grid-template-columns:repeat(2,1fr);gap:12px}
+ .sgrid .sn:last-child{grid-column:1/-1;max-width:50%;justify-self:center;width:100%}
+ .bcard{padding:30px 22px}
+ .bcard li{font-size:.98rem;padding:14px}
+ .team .ph:before{inset:16px -10px -16px 16px}
+ .team .ph .stamp{right:-6px;width:100px;height:100px;font-size:.8rem}
+ .mcard .tx{padding:32px 24px}
  .fg{grid-template-columns:1fr}
  form.lead-form{padding:30px 22px}
- .review{padding:34px 26px}
- .review p{font-size:1.28rem}
  .mbar{display:flex}
  .totop{bottom:88px;right:16px;width:50px;height:50px}
  .totop svg.ring{width:50px;height:50px}
  footer{padding-bottom:110px}
- .step .num{font-size:5rem}
 }
 @media (prefers-reduced-motion:reduce){
  *,*:before,*:after{animation:none!important;transition:none!important}
  .rv{opacity:1;transform:none}
- .hero h1 .hl svg path{stroke-dashoffset:0}
+ .hero h1 .ul svg path{stroke-dashoffset:0}
  html{scroll-behavior:auto}
 }
 </style>
@@ -334,19 +342,16 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
 
 <header class="top" id="top">
  <div class="wrap">
-  <a class="brand" href="#accueil" aria-label="Vitalunch, retour à l'accueil">
-   <span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2-7-5.6-7-10a7 7 0 0 1 7-7"/><path d="M12 21c4.5-2 7-5.6 7-10a7 7 0 0 0-7-7"/><path d="M12 4v17"/><path d="M12 12l-3.5-3M12 16l3.5-3"/></svg></span>
-   <span>vita<i>lunch</i></span>
-  </a>
+  <a class="brand" href="#accueil" aria-label="Vitalunch, retour en haut"><img src="img/logo-blanc-court.webp" alt="Vitalunch" width="700" height="436"></a>
   <nav class="nav" aria-label="Navigation principale">
    <a class="l" href="#fonctionnement">Comment ça marche</a>
    <a class="l" href="#avantages">Avantages</a>
-   <a class="l" href="#produits">Produits</a>
-   <a class="l" href="#famille">Qui sommes-nous</a>
-   <a class="l" href="#faq">Questions</a>
+   <a class="l" href="#collations">Collations</a>
+   <a class="l" href="#equipe">Qui sommes-nous</a>
+   <a class="l" href="#repas">Repas</a>
   </nav>
   <div class="right">
-   <a class="btn btn-or btn-sm" href="#installation">Installation gratuite</a>
+   <a class="btn btn-or btn-sm" href="#contact">Nous contacter</a>
    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
  </div>
@@ -355,247 +360,228 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
 <div class="panel" aria-hidden="true">
  <a href="#fonctionnement">Comment ça marche</a>
  <a href="#avantages">Avantages</a>
- <a href="#produits">Produits et repas</a>
- <a href="#famille">Qui sommes-nous</a>
- <a href="#faq">Questions</a>
- <a class="btn btn-or" href="#installation">Demander l'installation gratuite</a>
+ <a href="#collations">Collations</a>
+ <a href="#equipe">Qui sommes-nous</a>
+ <a href="#repas">Repas</a>
+ <a class="btn btn-or" href="#contact">Obtenir mon panier gratuit</a>
 </div>
 
 <main>
 <section class="hero" id="accueil">
- <img class="bg" src="img/hero.webp" alt="Panier de collations santé Vitalunch posé dans la cuisinette d'un bureau" fetchpriority="high">
  <div class="wrap">
-  <span class="hand rv">100 % gratuit pour l'employeur</span>
-  <h1 class="rv d1">Un panier de collations <span class="hl">en consignation<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 80 4, 200 4, 297 12" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></span>, directement dans vos bureaux</h1>
-  <p class="lead rv d2">Service clé en main, aucun frais pour l'employeur. Vos employés se servent et paient par code QR. On ravitaille dès qu'il en manque.</p>
-  <div class="cta-row rv d3">
-   <a class="btn btn-or" href="#installation">Demander l'installation gratuite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-   <a class="btn btn-ghost" href="#fonctionnement">Voir comment ça marche</a>
-  </div>
-  <div class="facts rv d3">
-   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Entreprise québécoise</span>
-   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sans engagement</span>
-   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Aucun risque financier</span>
-   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Service clé en main</span>
-  </div>
- </div>
- <div class="price-badge" aria-hidden="true"><b>0&nbsp;$</b><small><strong>pour l'employeur</strong>Installation, livraison et ravitaillement inclus</small></div>
- <a class="scroll" href="#intro" aria-label="Défiler vers le bas"></a>
-</section>
-
-<section class="intro center" id="intro">
- <div class="wrap">
-  <span class="kicker rv">Le bien-être au travail, version simple</span>
-  <h2 class="rv d1">Un avantage employé concret, <em>sans aucune charge</em> pour vos RH.</h2>
-  <p class="rv d2">Les initiatives qui fonctionnent sont celles qui restent simples. Vitalunch dépose un panier de collations santé dans vos locaux, vos équipes se servent quand elles en ont envie, et on s'occupe de tout le reste. Vous, vous n'avez rien à gérer.</p>
- </div>
-</section>
-
-<div class="marquee" aria-hidden="true">
- <div class="track">
-  <span>Collations santé</span><span>Options protéinées</span><span>Sans gluten</span><span>Paiement par code QR</span><span>Ravitaillement inclus</span><span>Repas Les Trois Chefs</span>
-  <span>Collations santé</span><span>Options protéinées</span><span>Sans gluten</span><span>Paiement par code QR</span><span>Ravitaillement inclus</span><span>Repas Les Trois Chefs</span>
- </div>
-</div>
-
-<section class="pad" id="fonctionnement">
- <div class="wrap">
-  <div class="steps-head">
-   <div>
-    <span class="kicker rv">Comment ça fonctionne</span>
-    <h2 class="rv d1">Trois étapes. Zéro tracas.</h2>
+  <div>
+   <span class="pill rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>100&nbsp;% gratuit pour l'employeur</span>
+   <h1 class="rv d1">Un <span class="or">panier de collations</span> en consignation, <span class="ul">directement dans vos bureaux<svg viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 110 6, 260 4, 396 13" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg></span></h1>
+   <p class="lead rv d2">Service clé en main, aucun frais pour l'employeur. Vos employés se servent et paient par code QR. On ravitaille dès qu'il en manque.</p>
+   <div class="cta-row rv d3">
+    <a class="btn btn-or" href="#contact">Obtenir mon panier gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn-wh" href="#fonctionnement">Comment ça marche</a>
    </div>
-   <p class="rv d2">Un processus simple et efficace pour nourrir vos employés sans tracas. Vous nous ouvrez la porte, on fait le reste.</p>
+   <div class="facts rv d4">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Entreprise québécoise</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sans engagement</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Aucun risque financier</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.85 12.15 8.65-8.65M18 5l2 2M15 8l2 2"/></svg>Service clé en main</span>
+   </div>
+  </div>
+  <div class="shot rv d2">
+   <div class="frame"><img src="img/panier.webp" alt="Panier de collations Vitalunch livré en entreprise" fetchpriority="high"></div>
+   <div class="qr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg></div>
+   <div class="badge" aria-hidden="true"><b>0&nbsp;$</b><small><strong>pour l'employeur</strong>Service 100&nbsp;% gratuit</small></div>
+  </div>
+ </div>
+ <a class="scroll" href="#fonctionnement" aria-label="Défiler vers le bas"></a>
+</section>
+
+<div class="mq-wrap"><div class="marquee" aria-hidden="true">
+ <div class="track">
+  <span>Un lunch sain, à portée de main</span><span>Scannez</span><span>Payez</span><span>Savourez</span><span>Options santé, protéinées, sans gluten</span><span>Aucun engagement</span>
+  <span>Un lunch sain, à portée de main</span><span>Scannez</span><span>Payez</span><span>Savourez</span><span>Options santé, protéinées, sans gluten</span><span>Aucun engagement</span>
+ </div>
+</div></div>
+
+<section class="pad how" id="fonctionnement">
+ <div class="wrap">
+  <div class="head">
+   <h2 class="rv">Comment ça fonctionne</h2>
+   <p class="rv d1">Un processus simple et efficace pour nourrir vos employés sans tracas.</p>
   </div>
   <div class="steps">
    <article class="step rv">
-    <span class="num">01</span>
-    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-2 10H5L3 10z"/><path d="M8 10l3-6M16 10l-3-6"/><path d="M9 14v3M12 14v3M15 14v3"/></svg></div>
+    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg></div>
+    <span class="n">Étape 1</span>
     <h3>On installe gratuitement</h3>
     <p>On dépose un panier de collations variées dans votre espace, sans aucun frais pour l'employeur.</p>
-    <span class="tag">0 $ pour vous</span>
    </article>
    <article class="step rv d1">
-    <span class="num">02</span>
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg></div>
-    <h3>Scan et paiement</h3>
-    <p>Vos employés scannent le code QR sur la collation et paient en quelques secondes. Aucun argent comptant.</p>
-    <span class="tag">Quelques secondes</span>
+    <span class="n">Étape 2</span>
+    <h3>Scan &amp; paiement</h3>
+    <p>Vos employés scannent le code QR sur la collation et paient en quelques secondes.</p>
    </article>
    <article class="step rv d2">
-    <span class="num">03</span>
     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+    <span class="n">Étape 3</span>
     <h3>Ravitaillement</h3>
     <p>Quand le panier baisse, on le remplit. Vous ne gérez rien, jamais.</p>
-    <span class="tag">Toujours plein</span>
+   </article>
+   <article class="step rv d3">
+    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg></div>
+    <span class="n">Étape 4</span>
+    <h3>Toujours varié</h3>
+    <p>Barres, noix, bretzels, mélanges du randonneur&nbsp;: on tourne les saveurs pour faire plaisir.</p>
    </article>
   </div>
+  <div class="center-cta rv"><a class="btn btn-or" href="#contact">C'est simple, commencez maintenant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
  </div>
 </section>
 
-<section class="benefits pad" id="avantages">
+<section class="pad benef" id="avantages">
  <div class="wrap">
-  <span class="kicker rv">Les avantages Vitalunch</span>
-  <h2 class="rv d1">Tout le monde y gagne. Surtout votre équipe.</h2>
+  <div class="head"><h2 class="rv">Les avantages Vitalunch</h2></div>
   <div class="bgrid">
    <div class="bcard emp rv">
     <div class="who"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 5.5 4.8"/></svg></i><h3>Pour vos employés</h3></div>
     <ul>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Des collations variées pour accompagner les repas</li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Des options santé, protéinées et sans gluten</li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Un paiement rapide par code QR, aucun argent comptant</li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Des repas santé au bureau, en option</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i>Un coup d'énergie en plein après-midi</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></i>Collations variées pour accompagner les repas</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></i>Options santé, protéinées, sans gluten</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 21h-4v-4"/></svg></i>Paiement rapide par code QR, aucun cash</li>
     </ul>
    </div>
    <div class="bcard ent rv d1">
     <div class="who"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5M9 10h.01M15 10h.01M12 10h.01"/></svg></i><h3>Pour votre entreprise</h3></div>
     <ul>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>0 $ pour l'employeur</b>, service 100 % gratuit</span></li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Aucun engagement</b>, aucun risque financier</span></li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Un avantage employé concret pour la <b>rétention et le bien-être</b></span></li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Clé en main</b>&nbsp;: livraison, installation, ravitaillement</span></li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/></svg></i>0&nbsp;$ pour l'employeur, service 100&nbsp;% gratuit</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></i>Aucun engagement, aucun risque financier</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></i>Un avantage employé concret pour rétention et bien-être</li>
+     <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m10.85 12.15 8.65-8.65M18 5l2 2M15 8l2 2"/></svg></i>Service clé en main&nbsp;: livraison, installation, ravitaillement</li>
     </ul>
    </div>
+  </div>
+  <div class="center-cta rv"><a class="btn btn-nv" href="#contact">Offrez le meilleur à votre équipe <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+ </div>
+</section>
+
+<section class="pad snacks" id="collations">
+ <div class="wrap">
+  <div class="head">
+   <span class="pill rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>Au fil des saisons</span>
+   <h2 class="rv d1">Notre sélection de collations</h2>
+   <p class="rv d2">Voici un aperçu de ce que vous retrouvez dans nos paniers. Nous introduisons des nouveautés tout au long de l'année et adaptons notre offre aux saisons pour toujours vous surprendre.</p>
+  </div>
+  <div class="sgrid">
+   <figure class="sn rv" style="margin:0"><div class="im"><img src="img/clif.webp" alt="Barres Clif" loading="lazy"></div><p>Barres Clif</p></figure>
+   <figure class="sn rv d1" style="margin:0"><div class="im"><img src="img/pretzel.webp" alt="Pretzel Pzazz" loading="lazy"></div><p>Pretzel Pzazz</p></figure>
+   <figure class="sn rv d2" style="margin:0"><div class="im"><img src="img/munchies.webp" alt="Munchies" loading="lazy"></div><p>Munchies</p></figure>
+   <figure class="sn rv d3" style="margin:0"><div class="im"><img src="img/prana.webp" alt="Prana Bio" loading="lazy"></div><p>Prana Bio</p></figure>
+   <figure class="sn rv d4" style="margin:0"><div class="im"><img src="img/trailmix.webp" alt="Trail Mix" loading="lazy"></div><p>Trail Mix</p></figure>
+  </div>
+  <p class="note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg>Des nouveautés tout au long de l'année&nbsp;: notre sélection évolue avec les saisons</p>
+  <div class="center-cta rv"><a class="btn btn-or" href="#contact">Je veux un panier dans mon bureau <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+ </div>
+</section>
+
+<section class="pad reviews" id="avis">
+ <div class="wrap">
+  <div class="head">
+   <h2 class="rv">Ce que nos clients disent</h2>
+   <p class="rv d1">Des entreprises québécoises qui font confiance à Vitalunch.</p>
+  </div>
+  <div class="rgrid">
+   <figure class="rv-card rv" style="margin:0">
+    <div class="stars" aria-label="5 étoiles"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></div>
+    <blockquote>«&nbsp;Depuis l'arrivée de Vitalunch, nos employés sont ravis. Le service est impeccable et les produits sont toujours frais.&nbsp;»</blockquote>
+    <figcaption class="by"><i>M</i><div><b>Marie-Claude L.</b><small>Directrice RH</small></div></figcaption>
+   </figure>
+   <figure class="rv-card rv d1" style="margin:0">
+    <div class="stars" aria-label="5 étoiles"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></div>
+    <blockquote>«&nbsp;Zéro gestion de notre côté, Vitalunch s'occupe de tout. C'est exactement ce dont on avait besoin.&nbsp;»</blockquote>
+    <figcaption class="by"><i>S</i><div><b>Stéphane B.</b><small>Gestionnaire des opérations</small></div></figcaption>
+   </figure>
+   <figure class="rv-card rv d2" style="margin:0">
+    <div class="stars" aria-label="5 étoiles"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></div>
+    <blockquote>«&nbsp;Un avantage concret pour attirer et retenir nos talents. Nos employés adorent avoir accès à des collations et repas santé.&nbsp;»</blockquote>
+    <figcaption class="by"><i>J</i><div><b>Julie T.</b><small>Présidente</small></div></figcaption>
+   </figure>
   </div>
  </div>
 </section>
 
-<section class="pad" id="produits">
- <div class="wrap split">
-  <div class="media rv">
-   <span class="blob"></span>
-   <div class="ph"><img src="img/collations.webp" alt="Assortiment de collations santé : barres, noix, fruits, craquelins et hoummos" loading="lazy"></div>
-   <div class="sticker"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2-7-5.6-7-10a7 7 0 0 1 14 0c0 4.4-2.5 8-7 10z"/><path d="M12 7v14"/></svg></i>De vrais produits, offerts chaque jour</div>
+<section class="pad team" id="equipe">
+ <div class="wrap grid">
+  <div class="ph rv">
+   <div class="fr"><img src="img/equipe.webp" alt="L'équipe Vitalunch : Philippe, Andréanne, Manon et Jean"></div>
+   <div class="stamp" aria-hidden="true"><span>Entreprise familiale québécoise</span></div>
   </div>
   <div>
-   <span class="kicker rv">Un aperçu de nos produits</span>
-   <h2 class="rv d1">Des collations qui font du bien, pas juste qui dépannent.</h2>
-   <p class="lead rv d2">De vrais produits offerts chaque jour dans les entreprises que nous desservons. Une sélection variée pour accompagner les repas et les petites faims de l'après-midi.</p>
-   <div class="chips rv d2">
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Santé</span>
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Protéinées</span>
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Sans gluten</span>
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Variées</span>
-   </div>
-   <a class="btn btn-dark rv d3" href="#installation">Recevoir mon panier <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+   <h2 class="rv d1">Qui sommes-nous</h2>
+   <p class="sub rv d1">Une entreprise familiale québécoise, animée par une mission simple.</p>
+   <p class="t rv d2">Nous sommes <strong>Philippe, Andréanne, Manon et Jean</strong>, une famille québécoise passionnée par le bien-être au travail.</p>
+   <p class="t rv d2">Notre mission&nbsp;: offrir une <strong>alternative santé, de qualité et abordable</strong> dans les entreprises du Québec. Nous croyons qu'un bon repas peut faire une vraie différence dans le quotidien des gens.</p>
+   <div class="sign rv d3"><span>Entreprise familiale québécoise</span></div>
   </div>
  </div>
 </section>
 
 <section class="pad meals" id="repas">
- <div class="wrap split rev">
-  <div class="media rv">
-   <div class="ph"><img src="img/repas.webp" alt="Repas santé réchauffé au bureau à côté d'un plat surgelé sous vide" loading="lazy"></div>
-   <div class="sticker"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 6l14.2 12M4.9 18 19.1 6M2 12h20"/></svg></i>Surgelé sous vide, sans agents de conservation</div>
-  </div>
-  <div>
-   <span class="kicker rv">Envie d'aller plus loin&nbsp;?</span>
-   <h2 class="rv d1">Ajoutez les repas. Le dîner est réglé.</h2>
-   <p class="lead rv d2">En plus du panier de collations, on peut aussi livrer des repas santé préparés par notre partenaire <b>Les Trois Chefs</b>. Idéal pour les dîners au bureau, avec des options pour tous les régimes alimentaires.</p>
-   <div class="diet rv d2">
-    <span><small>Option</small>Ultra FIT</span>
-    <span><small>Option</small>Végétarien</span>
-    <span><small>Option</small>Végétalien</span>
-    <span><small>Option</small>Sans gluten</span>
-    <span><small>Option</small>Faible en sel</span>
-    <span><small>Option</small>Protéiné</span>
-   </div>
-   <ul class="vac rv d3">
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Fraîcheur et saveurs conservées</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Nutriments et texture préservés</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Moins de gaspillage alimentaire</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Prêt en quelques minutes</li>
-   </ul>
-   <p class="partner rv d3">Repas frais et nutritifs, préparés avec des ingrédients de qualité supérieure par <b>Les Trois Chefs</b>.</p>
-  </div>
- </div>
-</section>
-
-<section class="family" id="famille">
- <img class="bg" src="img/pause.webp" alt="Salle de pause lumineuse d'une entreprise québécoise à l'heure du dîner" loading="lazy" data-parallax>
  <div class="wrap">
-  <div class="fcard">
-   <span class="hand rv">Qui sommes-nous</span>
-   <blockquote class="rv d1">Une famille québécoise passionnée par <em>le bien-être au travail</em>.</blockquote>
-   <p class="rv d2">Notre mission&nbsp;: offrir une alternative santé, de qualité et abordable dans les entreprises du Québec. Nous croyons qu'un bon repas peut faire une vraie différence dans le quotidien des gens.</p>
-   <div class="names rv d3">
-    <span><i>P</i>Philippe</span><span><i>A</i>Andréanne</span><span><i>M</i>Manon</span><span><i>J</i>Jean</span>
+  <div class="head">
+   <span class="pill nv rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>Option complémentaire</span>
+   <h2 class="rv d1">Envie d'aller plus loin&nbsp;? Ajoutez les repas.</h2>
+   <p class="rv d2">En plus du panier de collations, on peut aussi livrer des repas santé préparés par notre partenaire <strong>Les Trois Chefs</strong>. Idéal pour les dîners au bureau.</p>
+  </div>
+  <div class="mcard rv">
+   <div class="lg"><img src="img/trois-chefs.webp" alt="Logo Les Trois Chefs" width="800" height="243"></div>
+   <div class="tx">
+    <h3>Les Trois Chefs</h3>
+    <p>Repas frais et nutritifs, préparés avec des ingrédients de qualité supérieure. Options pour tous les régimes alimentaires.</p>
+    <div class="tags"><span>Ultra FIT</span><span>Végétarien</span><span>Végétalien</span><span>Sans gluten</span><span>Faible en sel</span><span>Protéiné</span></div>
+    <a class="btn btn-line" href="#contact">En savoir plus sur les repas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
    </div>
   </div>
  </div>
 </section>
 
-<section class="pad" id="faq">
- <div class="wrap proof">
-  <aside class="review rv">
-   <div class="q"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 6C6.5 7 4.5 9.6 4.5 13v5h6v-6H7.6c.2-1.9 1.3-3.3 2.9-4L9.5 6zm10 0c-3 1-5 3.6-5 7v5h6v-6h-2.9c.2-1.9 1.3-3.3 2.9-4l-1-2z"/></svg></div>
-   <div class="stars" aria-label="5 étoiles">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
-   </div>
-   <p>«&nbsp;Depuis l'arrivée de Vitalunch, nos employés sont ravis. Le service est impeccable et les produits sont toujours frais.&nbsp;»</p>
-   <div class="by"><i>MC</i><div><b>Marie-Claude L.</b><small>Directrice RH</small></div></div>
-  </aside>
-  <div class="faq">
-   <span class="kicker rv">Vos questions</span>
-   <h2 class="rv d1">On vous répond avant même l'appel.</h2>
-   <div class="qa open rv">
-    <button aria-expanded="true">Combien ça coûte à l'entreprise&nbsp;?<i></i></button>
-    <div class="ans"><div><p>Rien. Le service est 100 % gratuit pour l'employeur&nbsp;: installation, livraison et ravitaillement compris. Ce sont les employés qui paient leurs collations, seulement quand ils en prennent.</p></div></div>
-   </div>
-   <div class="qa rv">
-    <button aria-expanded="false">Est-ce qu'il y a un engagement&nbsp;?<i></i></button>
-    <div class="ans"><div><p>Aucun. Pas de contrat à long terme, aucun risque financier. Le panier reste tant qu'il fait plaisir à votre équipe.</p></div></div>
-   </div>
-   <div class="qa rv">
-    <button aria-expanded="false">Comment les employés paient-ils&nbsp;?<i></i></button>
-    <div class="ans"><div><p>Ils scannent le code QR sur la collation avec leur téléphone et paient en quelques secondes. Aucun argent comptant à manipuler, aucune caisse à surveiller.</p></div></div>
-   </div>
-   <div class="qa rv">
-    <button aria-expanded="false">Qui s'occupe de remplir le panier&nbsp;?<i></i></button>
-    <div class="ans"><div><p>Nous. Quand le panier baisse, on le remplit. Votre équipe RH n'a rien à gérer, jamais.</p></div></div>
-   </div>
-   <div class="qa rv">
-    <button aria-expanded="false">Peut-on aussi offrir des repas&nbsp;?<i></i></button>
-    <div class="ans"><div><p>Oui. En plus des collations, on peut livrer des repas santé surgelés sous vide préparés par Les Trois Chefs, avec des options Ultra FIT, végétariennes, végétaliennes, sans gluten, faibles en sel et protéinées.</p></div></div>
-   </div>
-  </div>
- </div>
-</section>
-
-<section class="final" id="installation">
- <img class="bg" src="img/hero.webp" alt="" loading="lazy">
+<section class="pad faq" id="faq">
  <div class="wrap">
+  <div class="head"><span class="pill rv">Vos questions</span><h2 class="rv d1">Simple comme un scan</h2></div>
+<div class="qa rv open"><button aria-expanded="true">Combien ça coûte à l'entreprise&nbsp;?<i></i></button><div class="ans"><div><p>Rien. 0&nbsp;$ pour l'employeur, service 100&nbsp;% gratuit&nbsp;: livraison, installation et ravitaillement compris. Vos employés paient seulement les collations qu'ils prennent.</p></div></div></div>
+<div class="qa rv"><button aria-expanded="false">Est-ce qu'il y a un engagement&nbsp;?<i></i></button><div class="ans"><div><p>Aucun engagement, aucun risque financier.</p></div></div></div>
+<div class="qa rv"><button aria-expanded="false">Comment mes employés paient-ils&nbsp;?<i></i></button><div class="ans"><div><p>Ils scannent le code QR sur la collation et paient en quelques secondes. Aucun cash.</p></div></div></div>
+<div class="qa rv"><button aria-expanded="false">Qui s'occupe de remplir le panier&nbsp;?<i></i></button><div class="ans"><div><p>Nous. Quand le panier baisse, on le remplit. Vous ne gérez rien, jamais.</p></div></div></div>
+<div class="qa rv"><button aria-expanded="false">Peut-on aussi offrir des repas&nbsp;?<i></i></button><div class="ans"><div><p>Oui. En plus du panier de collations, on peut aussi livrer des repas santé préparés par notre partenaire Les Trois Chefs, avec des options pour tous les régimes alimentaires.</p></div></div></div>
+ </div>
+</section>
+
+<section class="final" id="contact">
+ <div class="wrap grid">
   <div>
-   <span class="kicker rv">Prêts à essayer&nbsp;?</span>
-   <h2 class="rv d1">Offrez à votre équipe une pause <em>qui fait du bien</em>.</h2>
-   <p class="lead rv d2">Dites-nous où vous êtes, on vous revient rapidement pour planifier l'installation de votre panier. C'est gratuit et sans engagement.</p>
-   <ul class="checks rv d2">
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Installation gratuite dans vos locaux</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Aucun frais, aucun engagement</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ravitaillement pris en charge</li>
-   </ul>
-   <a class="mail rv d3" href="mailto:info@vitalunch.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@vitalunch.ca</a>
+   <img class="rv" src="img/logo-blanc.webp" alt="Vitalunch, un lunch sain, à portée de main" style="width:190px;height:auto;margin-bottom:26px">
+   <h2 class="rv d1">Prêt à offrir le meilleur à votre <em>équipe</em>&nbsp;?</h2>
+   <p class="lead rv d2">Remplissez le formulaire, ça prend 30 secondes, et nous vous contacterons rapidement.</p>
+   <a class="mail rv d2" href="mailto:info@vitalunch.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@vitalunch.ca</a>
+   <div class="mini rv d3"><img src="img/equipe.webp" alt=""><p><b>Philippe, Andréanne, Manon et Jean</b><br>Aucun engagement. Nous vous contacterons dans les 24h.</p></div>
   </div>
   <form class="lead-form rv d1" novalidate>
    <div class="fields">
-    <h3>Demander l'installation gratuite</h3>
-    <p>Moins d'une minute. On vous recontacte rapidement.</p>
     <div class="fg">
-     <div><label for="f-nom">Votre nom</label><input id="f-nom" name="nom" autocomplete="name" placeholder="Prénom et nom"></div>
-     <div><label for="f-ent">Entreprise</label><input id="f-ent" name="entreprise" autocomplete="organization" placeholder="Nom de l'entreprise"></div>
-     <div><label for="f-emp">Nombre d'employés sur place</label>
-      <select id="f-emp" name="employes"><option>Moins de 15</option><option>15 à 50</option><option>51 à 150</option><option>Plus de 150</option></select></div>
-     <div><label for="f-ville">Ville</label><input id="f-ville" name="ville" autocomplete="address-level2" placeholder="Ex. Québec"></div>
-     <div><label for="f-mail">Courriel</label><input id="f-mail" name="courriel" type="email" autocomplete="email" placeholder="vous@entreprise.ca"></div>
-     <div><label for="f-tel">Téléphone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel" placeholder="(000) 000-0000"></div>
+     <div><label for="f-pre">Prénom *</label><input id="f-pre" autocomplete="given-name" placeholder="Prénom"></div>
+     <div><label for="f-nom">Nom *</label><input id="f-nom" autocomplete="family-name" placeholder="Nom"></div>
+     <div class="full"><label for="f-ent">Nom de l'entreprise *</label><input id="f-ent" autocomplete="organization" placeholder="Votre entreprise"></div>
+     <div><label for="f-mail">Courriel *</label><input id="f-mail" type="email" autocomplete="email" placeholder="courriel@entreprise.com"></div>
+     <div><label for="f-tel">Téléphone *</label><input id="f-tel" type="tel" autocomplete="tel" placeholder="(514) 555-0123"></div>
+     <div><label for="f-adr">Adresse de livraison</label><input id="f-adr" autocomplete="street-address" placeholder="Rue, ville, code postal"></div>
+     <div><label for="f-emp">Nombre d'employés</label><input id="f-emp" placeholder="Ex. : 25"></div>
+     <div class="full"><label for="f-msg">Message (optionnel)</label><textarea id="f-msg" rows="3" placeholder="Précisions, préférences, questions..."></textarea></div>
     </div>
-    <button class="btn btn-or" type="submit">Je veux mon panier gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-    <p class="fine">Aucun frais pour l'employeur. Aucun engagement.</p>
+    <button class="btn btn-or" type="submit">Envoyer ma demande, c'est gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <p class="fine">Aucun engagement. Nous vous contacterons dans les 24h.</p>
    </div>
    <div class="ok" role="status">
     <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></i>
-    <h3>Merci, c'est noté&nbsp;!</h3>
-    <p style="color:var(--muted);margin:8px 0 0">Ceci est une maquette&nbsp;: dans la version finale, votre demande arrive directement chez Vitalunch.</p>
+    <h3>Merci&nbsp;! Nous vous contacterons sous peu.</h3>
+    <p style="color:var(--muted);margin:10px 0 0">Ceci est une maquette&nbsp;: dans la version finale, votre demande arrive directement chez Vitalunch.</p>
    </div>
   </form>
  </div>
@@ -605,17 +591,13 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
 <footer>
  <div class="wrap">
   <div class="row">
-   <div>
-    <a class="brand" href="#accueil"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5-2-7-5.6-7-10a7 7 0 0 1 7-7"/><path d="M12 21c4.5-2 7-5.6 7-10a7 7 0 0 0-7-7"/><path d="M12 4v17"/><path d="M12 12l-3.5-3M12 16l3.5-3"/></svg></span><span>vita<i>lunch</i></span></a>
-    <p>Entreprise familiale québécoise. Un panier de collations santé en consignation, directement dans vos bureaux.</p>
+   <div class="id"><img src="img/logo-blanc-court.webp" alt="Vitalunch" loading="lazy"><div><b>Vitalunch</b>Entreprise québécoise familiale</div></div>
+   <div class="links">
+    <a href="mailto:info@vitalunch.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@vitalunch.ca</a>
+    <a href="https://www.facebook.com/profile.php?id=61572684305926" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="https://www.linkedin.com/company/vitalunch" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+    <a href="https://www.instagram.com/vitalunch.ca" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
    </div>
-   <nav aria-label="Pied de page">
-    <a href="#fonctionnement">Comment ça marche</a>
-    <a href="#avantages">Avantages</a>
-    <a href="#produits">Produits</a>
-    <a href="#faq">Questions</a>
-    <a href="mailto:info@vitalunch.ca">info@vitalunch.ca</a>
-   </nav>
   </div>
   <div class="bottom">
    <span>© 2026 Vitalunch. Tous droits réservés.</span>
@@ -624,10 +606,7 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
  </div>
 </footer>
 
-<div class="mbar" id="mbar">
- <a href="mailto:info@vitalunch.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Écrire</a>
- <a class="or" href="#installation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-2 10H5L3 10z"/><path d="M8 10l3-6M16 10l-3-6"/></svg>Panier gratuit</a>
-</div>
+<div class="mbar" id="mbar"><a href="#contact">Obtenir mon panier gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 
 <button class="totop" id="totop" aria-label="Retour en haut">
  <svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26"/></svg>
@@ -637,14 +616,13 @@ footer .bottom a{color:var(--orange2);text-decoration:none}
 <script>
 (function(){
  var top=document.getElementById('top'),hero=document.getElementById('accueil'),totop=document.getElementById('totop'),ring=totop.querySelector('circle'),mbar=document.getElementById('mbar'),C=163.4;
- var par=document.querySelector('[data-parallax]'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  function onScroll(){
   var y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
   top.classList.toggle('fixed',y>hero.offsetHeight-90);
   totop.classList.toggle('show',y>600);
   mbar.classList.toggle('show',y>420);
   ring.style.strokeDashoffset=C-(C*Math.min(1,y/h));
-  if(par&&!reduce){var r=par.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){par.style.transform='translateY('+((r.top)*-0.08)+'px)'}}
   var cur='';document.querySelectorAll('main section[id]').forEach(function(s){if(s.getBoundingClientRect().top<160)cur=s.id});
   document.querySelectorAll('.nav a.l').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
  }
