@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Agences Coumar · Maquette de la page d'accueil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#1D4F91;--bleu2:#2A63AE;--marine:#0E2A50;--marine2:#143866;--ciel:#EAF1FA;--ciel2:#F5F8FC;--ink:#14243D;--muted:#566275;--line:rgba(29,79,145,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:"Fira Sans",system-ui,sans-serif;line-height:1.1;margin:0;color:var(--marine);letter-spacing:-.015em}
+h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:600}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:"Fira Sans";font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu);margin-bottom:14px}
+.kick:before{content:"";width:28px;height:2px;background:currentColor}
+.lead{font-size:1.12rem;color:var(--muted);max-width:720px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:8px;font-family:"Fira Sans";font-weight:600;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-wh{background:#fff;color:var(--bleu);box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.btn-wh:hover{background:var(--ciel)}
+.btn-bl{background:var(--bleu);color:#fff;box-shadow:0 14px 30px -14px rgba(29,79,145,.9)}
+.btn-bl:hover{background:var(--bleu2)}
+.btn-gh{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn-gh:hover{background:rgba(255,255,255,.16)}
+.btn-ln{border:1.5px solid var(--bleu);color:var(--bleu);background:#fff}
+.btn-ln:hover{background:var(--ciel)}
+.btn-sm{padding:11px 18px;font-size:.92rem}
+
+.ribbon{background:var(--marine);line-height:1.4;color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;position:relative;z-index:7;border-bottom:1px solid rgba(255,255,255,.12)}
+.ribbon b{font-weight:700}
+
+/* en-tête */
+.top{position:absolute;top:36px;left:0;right:0;z-index:6}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px;transition:padding .3s}
+.top.fixed{position:fixed;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 10px 30px -18px rgba(14,42,80,.6);animation:slideDown .35s ease}
+.top.fixed .wrap{padding-top:10px;padding-bottom:10px}
+@keyframes slideDown{from{transform:translateY(-100%)}to{transform:none}}
+.brand{position:relative;display:block}
+.brand img{height:50px;width:auto;transition:height .3s,opacity .3s}
+.brand .lb{position:absolute;inset:0}
+.brand .lc{opacity:0}
+.top.fixed .brand .lc{opacity:1}.top.fixed .brand .lb{opacity:0}
+.top.fixed .brand img{height:40px}
+.top.solid{position:sticky;top:0;background:#fff;box-shadow:0 1px 0 var(--line)}
+.top.solid .brand .lc{opacity:1}.top.solid .brand .lb{opacity:0}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.l{white-space:nowrap;color:rgba(255,255,255,.9);text-decoration:none;font-family:"Fira Sans";font-weight:500;font-size:.96rem;position:relative;padding:4px 0}
+.top.fixed .nav a.l,.top.solid .nav a.l{color:var(--ink)}
+.nav a.l:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a.l:hover:after,.nav a.l.on:after{transform:scaleX(1)}
+.right{display:flex;align-items:center;gap:14px}
+.tel{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-family:"Fira Sans";font-weight:600;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.top.fixed .tel,.top.solid .tel{color:var(--bleu)}
+.top.fixed .btn-wh,.top.solid .btn-wh{background:var(--bleu);color:#fff}
+.burger{display:none;width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);cursor:pointer;position:relative;z-index:8}
+.top.fixed .burger,.top.solid .burger{border-color:var(--line);background:var(--ciel)}
+.burger i{position:absolute;left:13px;right:13px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.top.fixed .burger i,.top.solid .burger i{background:var(--marine)}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:22px}.burger i:nth-child(3){top:28px}
+body.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger i:nth-child(2){opacity:0}
+body.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* héros */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#2A63AE 0%,transparent 60%),linear-gradient(135deg,#0E2A50 0%,#1D4F91 100%);color:#fff;padding:190px 0 110px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.3rem,4.6vw,3.9rem);font-weight:700;margin-bottom:22px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(255,255,255,.22) 62%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero .kick{color:#BFD3EE}
+.hero p.sub{font-size:1.15rem;color:rgba(255,255,255,.86);max-width:600px;margin:0 0 30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.9rem}
+.chip svg{width:16px;height:16px}
+.vitrine{position:relative;height:500px}
+.vitrine .card{position:absolute;background:#fff;border-radius:18px;box-shadow:0 40px 70px -30px rgba(0,0,0,.55);overflow:hidden}
+.vitrine .c1{width:58%;left:0;top:30px;height:390px;padding:22px}
+.vitrine .c2{width:46%;right:0;top:0;height:240px}
+.vitrine .c3{width:46%;right:0;bottom:20px;height:220px}
+.vitrine .c1 img{width:100%;height:100%;object-fit:contain}
+.vitrine .c2 img,.vitrine .c3 img{width:100%;height:100%;object-fit:cover}
+.vitrine .tag{position:absolute;left:14px;bottom:14px;background:rgba(14,42,80,.88);color:#fff;font-size:.8rem;font-family:"Fira Sans";font-weight:500;padding:6px 12px;border-radius:6px}
+.badge84{position:absolute;left:-26px;bottom:24px;background:#fff;color:var(--marine);border-radius:14px;padding:16px 20px;box-shadow:0 30px 50px -24px rgba(0,0,0,.6);display:flex;align-items:center;gap:14px;z-index:2}
+.badge84 b{font-family:"Fira Sans";font-size:2rem;color:var(--bleu);line-height:1}
+.badge84 span{font-size:.88rem;line-height:1.3;color:var(--muted)}
+.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:14px}
+.scroll:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:sc 1.8s infinite}
+@keyframes sc{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+section{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px;flex-wrap:wrap}
+.head .lead{margin:16px 0 0}
+
+/* catégories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cat{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .3s,box-shadow .3s,border-color .3s}
+.cat:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(14,42,80,.55);border-color:transparent}
+.cat .im{aspect-ratio:16/11;overflow:hidden;background:var(--ciel)}
+.cat .im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.cat .im img.ct{object-fit:contain;padding:14px;background:#fff}
+.cat:hover .im img{transform:scale(1.06)}
+.cat .tx{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat .tx p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.cat .go{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:8px;color:var(--bleu);font-family:"Fira Sans";font-weight:600;font-size:.92rem}
+.cat .go svg{width:16px;height:16px;transition:transform .3s}
+.cat:hover .go svg{transform:translateX(4px)}
+.cat.wide{grid-column:span 2}
+.cat.wide .im{aspect-ratio:auto;height:220px}
+.cat.cta{background:linear-gradient(135deg,var(--marine),var(--bleu));color:#fff;border:0;justify-content:center;padding:30px}
+.cat.cta h3{color:#fff;font-size:1.5rem}
+.cat.cta p{color:rgba(255,255,255,.82);margin:10px 0 18px}
+
+/* clientèle */
+.clients{background:var(--ciel2)}
+.cl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cl{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;font-family:"Fira Sans";font-weight:500;color:var(--marine);transition:background .3s,color .3s}
+.cl svg{width:28px;height:28px;color:var(--bleu);transition:color .3s}
+.cl:hover{background:var(--bleu);color:#fff}
+.cl:hover svg{color:#fff}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sv{position:relative;padding:34px 30px;border-radius:16px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.sv:hover{transform:translateY(-5px);box-shadow:0 30px 50px -32px rgba(14,42,80,.6)}
+.sv .ic{width:58px;height:58px;border-radius:14px;background:var(--ciel);display:grid;place-items:center;color:var(--bleu);margin-bottom:22px;transition:background .3s,color .3s}
+.sv:hover .ic{background:var(--bleu);color:#fff}
+.sv .ic svg{width:28px;height:28px}
+.sv p{color:var(--muted);margin:12px 0 0}
+.sv .n{position:absolute;right:22px;top:16px;font-family:"Fira Sans";font-weight:700;font-size:3.6rem;color:var(--ciel);line-height:1}
+
+/* à propos */
+.about{background:var(--marine);color:#fff;position:relative;overflow:hidden}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about h2{color:#fff}
+.about .kick{color:#BFD3EE}
+.about p{color:rgba(255,255,255,.84);font-size:1.08rem}
+.about .img{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);background:#fff}
+.about .img img{width:100%}
+.stats{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font-family:"Fira Sans";font-size:2.4rem;color:#fff;line-height:1}
+.stats span{font-size:.9rem;color:#BFD3EE}
+
+/* marques */
+.brands{padding:70px 0;border-bottom:1px solid var(--line)}
+.brands h3{text-align:center;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:28px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:mq 50s linear infinite}
+.track span{white-space:nowrap;font-family:"Fira Sans";font-weight:600;font-size:1.1rem;color:var(--marine);padding:12px 22px;border:1px solid var(--line);border-radius:999px;background:#fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;font-family:"Fira Sans";font-weight:600;font-size:1.1rem;color:var(--marine);display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:1.5rem;line-height:1;color:var(--bleu);transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--muted);margin:12px 0 0}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--marine),var(--bleu));color:#fff}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{color:#fff}
+.contact .kick{color:#BFD3EE}
+.contact p{color:rgba(255,255,255,.85)}
+.coords{display:flex;flex-direction:column;gap:16px;margin-top:30px}
+.coords a,.coords div{display:flex;gap:14px;align-items:center;color:#fff;text-decoration:none;font-size:1.05rem}
+.coords svg{width:22px;height:22px;flex:none;color:#BFD3EE}
+form{background:#fff;color:var(--ink);border-radius:18px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 40px 70px -30px rgba(0,0,0,.55)}
+form .full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:600;color:var(--marine)}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1px solid #CFD8E5;border-radius:8px;background:var(--ciel2);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--bleu);border-color:transparent;background:#fff}
+textarea{min-height:110px;resize:vertical}
+
+footer{background:#0A1F3C;color:rgba(255,255,255,.7);padding:60px 0 100px;font-size:.95rem}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-size:1rem;margin-bottom:14px}
+footer a{color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:3px 0}
+footer a:hover{color:#fff}
+footer .logo img{height:44px;margin-bottom:16px}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;grid-column:1/-1;font-size:.85rem}
+
+/* barre mobile */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:9;background:#fff;box-shadow:0 -10px 30px -12px rgba(14,42,80,.4);padding:10px 12px;gap:10px}
+.mbar a{flex:1;padding:13px 10px;font-size:.95rem}
+.totop{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border-radius:50%;background:#fff;border:0;box-shadow:0 14px 30px -10px rgba(14,42,80,.5);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:8;display:grid;place-items:center}
+.totop.on{opacity:1;pointer-events:auto}
+.totop svg.ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.totop svg.ar{width:20px;height:20px;color:var(--bleu)}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* page produit */
+.crumbs{font-size:.9rem;color:var(--muted);padding:26px 0 0}
+.crumbs a{color:var(--bleu);text-decoration:none}
+.phead{background:var(--ciel2);padding:30px 0 60px}
+.phead .wrap>div.g{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;margin-top:26px}
+.phead h1{font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:16px}
+.phead .img{border-radius:16px;overflow:hidden}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.filters button{font:inherit;font-size:.92rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--marine);cursor:pointer}
+.filters button.on{background:var(--bleu);color:#fff;border-color:var(--bleu)}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+.side{position:sticky;top:90px;border:1px solid var(--line);border-radius:14px;padding:22px}
+.side h4{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.side label{flex-direction:row;align-items:center;gap:10px;font-weight:400;color:var(--ink);padding:5px 0}
+.side input{width:auto}
+.side hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pc{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-5px);box-shadow:0 30px 50px -32px rgba(14,42,80,.6)}
+.pc .im{background:#fff;aspect-ratio:1;padding:18px;border-bottom:1px solid var(--line)}
+.pc .im img{width:100%;height:100%;object-fit:contain}
+.pc .tx{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pc .br{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bleu);font-weight:700}
+.pc h3{font-size:1.08rem}
+.pc .ty{font-size:.9rem;color:var(--muted)}
+.pc .act{margin-top:auto;padding-top:14px;display:flex;gap:8px}
+.pc .act a{flex:1;padding:10px 12px;font-size:.88rem}
+.fiche{background:var(--ciel2)}
+.fiche .wrap>div.g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.gal .main{background:#fff;border-radius:18px;border:1px solid var(--line);padding:30px;aspect-ratio:1}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.gal .th{display:flex;gap:12px;margin-top:14px}
+.gal .th button{width:84px;height:84px;border-radius:12px;border:1px solid var(--line);background:#fff;padding:8px;cursor:pointer}
+.gal .th button.on{border:2px solid var(--bleu)}
+.gal .th img{width:100%;height:100%;object-fit:contain}
+.fiche h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:6px 0 14px}
+.ticks{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks svg{width:22px;height:22px;color:var(--bleu);flex:none;margin-top:2px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:24px 0}
+td{padding:12px 16px;border-bottom:1px solid var(--line);font-size:.95rem}
+td:first-child{font-weight:600;color:var(--marine);width:45%}
+td.af{color:#8A95A6;font-style:italic}
+.note{font-size:.85rem;color:var(--muted);background:#fff;border:1px dashed #B8C6DA;border-radius:10px;padding:12px 14px}
+.pbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+@media (max-width:1100px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .cl-grid{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+  .nav{position:fixed;inset:0;background:var(--marine);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s;z-index:7}
+  .nav a.l,.top.fixed .nav a.l,.top.solid .nav a.l{color:#fff;font-size:1.4rem}
+  body.menu-open .nav{transform:none;visibility:visible}
+  .nav{visibility:hidden;transition:transform .4s,visibility .4s}
+  .burger{display:block}
+  .tel span,.right .btn{display:none}
+  .hero{padding:150px 0 90px}
+  .hero .wrap,.about .wrap,.contact .wrap,.faq,.phead .wrap>div.g,.fiche .wrap>div.g,.layout{grid-template-columns:1fr}
+  .vitrine{height:380px;margin-top:10px}
+  .badge84{left:10px}
+  .svc{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .mbar{display:flex}
+  .totop{bottom:86px}
+  .side{position:static}
+  section{padding:70px 0}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .cats,.grid{grid-template-columns:1fr}
+  .cat.wide{grid-column:auto}
+  .cl-grid{grid-template-columns:repeat(2,1fr)}
+  form{grid-template-columns:1fr;padding:24px}
+  .vitrine{height:320px}
+  .vitrine .c1{height:290px;width:60%}
+  .vitrine .c2{height:150px}.vitrine .c3{height:140px}
+  .brand img{height:40px}
+  .scroll{display:none}
+  .pc .act{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Aperçu de votre future page d'accueil, préparé par <b>LM Web</b> pour <b>Les Agences Coumar</b> · <a href="produit.html" style="color:#fff">Voir aussi la page catalogue et fiche produit</a></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="Les Agences Coumar"><img class="lc" src="img/logo.png" alt="Les Agences Coumar"><img class="lb" src="img/logo-blanc.png" alt=""></a>
+    <nav class="nav" id="nav">
+      <a class="l" href="#produits">Nos produits</a>
+      <a class="l" href="#clientele">Clientèle</a>
+      <a class="l" href="#services">Service</a>
+      <a class="l" href="#apropos">À propos</a>
+      <a class="l" href="#contact">Contact</a>
+    </nav>
+    <div class="right">
+      <a class="tel" href="tel:+14505369006"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>(450) 536-9006</span></a>
+      <a class="btn btn-wh btn-sm" href="#contact">Demander une soumission</a>
+      <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Les Agences Coumar · Depuis 1984</div>
+      <h1>Fourniture d'équipements professionnels de restauration <em>à travers Canada</em></h1>
+      <p class="sub">Fondé en 1984, les Agences Coumar vendent des équipements professionnels aux bars, bars laitiers, gelato, pâtissiers, chocolatiers, restaurants, hôtels, dépanneurs, supermarchés, restauration rapide et pour tous types de commerces.</p>
+      <div class="ctas">
+        <a class="btn btn-wh" href="#produits">Voir nos produits <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-gh" href="#contact">Demander une soumission</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Installation et formation</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Aide aux financements</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Service après-vente complet</span>
+      </div>
+    </div>
+    <div class="vitrine rv">
+      <div class="card c1"><img src="img/creme-2.webp" alt="Machine à crème glacée molle"></div>
+      <div class="card c2"><img src="img/bar-laitier.webp" alt="Comptoir à gelato"><span class="tag">Bars laitiers et gelato</span></div>
+      <div class="card c3"><img src="img/cuisson.webp" alt="Cuisine professionnelle"><span class="tag">Cuisson</span></div>
+      <div class="badge84"><b>1984</b><span>Plus de 40 ans<br>au service de la restauration</span></div>
+    </div>
+  </div>
+  <span class="scroll" aria-hidden="true"></span>
+</section>
+
+<section id="produits">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <div class="kick">Nos produits</div>
+        <h2>Spécialiste en équipements<br>professionnels de restauration</h2>
+        <p class="lead">En partenariat avec les manufacturiers italiens, les agences Coumar mettent à la disposition de sa clientèle l'accès à des équipements variés, de qualité et exclusifs.</p>
+      </div>
+      <a class="btn btn-ln" href="produit.html">Parcourir le catalogue <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="cats">
+      <a class="cat wide rv" href="produit.html"><div class="im"><img src="img/bar-laitier.webp" alt="Équipements pour bar laitier"></div><div class="tx"><h3>Équipements pour bar laitier</h3><p>Machines à crèmes glacées, à slush, à milk shake, comptoirs à gelato, yogourt glacé.</p><span class="go">Voir les équipements <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img src="img/refrigeration.webp" alt="Réfrigération"></div><div class="tx"><h3>Réfrigération</h3><p>Vitrines, comptoirs réfrigérés, machines à glace.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img src="img/cuisson.webp" alt="Cuisson"></div><div class="tx"><h3>Cuisson</h3><p>Fours combi, fours à pizza, friteuses, machines à poulet.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img src="img/cafe.webp" alt="Café"></div><div class="tx"><h3>Machines à café expresso</h3><p>Gaggia, Saeco, Unic, Caffitaly.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img class="ct" src="img/chariot.webp" alt="Chariots"></div><div class="tx"><h3>Chariots et paniers de magasinage</h3><p>Pour les détaillants en alimentation, garantis au Québec.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img src="img/jus.webp" alt="Machines à jus"></div><div class="tx"><h3>Machines à jus d'orange</h3><p>Centrifugeuse automatique fabriquée à la main.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="cat rv" href="produit.html"><div class="im"><img class="ct" src="img/popcorn.webp" alt="Pop corn"></div><div class="tx"><h3>Machines à pop corn</h3><p>Star et Gold Medal Products.</p><span class="go">Voir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="clients" id="clientele">
+  <div class="wrap">
+    <div class="head rv"><div><div class="kick">Clientèle</div><h2>Pour tous types de commerces</h2><p class="lead">Elles aident les gens de la restauration à bien s'équiper pour mieux servir leur clientèle.</p></div></div>
+    <div class="cl-grid rv">
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 22h8M12 15v7M5 3h14l-7 12z"/></svg>Bars</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 11 4 11 4-11"/><circle cx="12" cy="7" r="5"/></svg>Bars laitiers</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V5M12 8V4M17 8V5"/></svg>Gelato</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21h16M5 21v-7h14v7M8 14V9a4 4 0 0 1 8 0v5"/></svg>Pâtissiers</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/></svg>Chocolatiers</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 2v20M4 2v6a3 3 0 0 0 6 0V2M17 2c-2 2-3 5-3 8h3v12"/></svg>Restaurants</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V7l9-4 9 4v14M9 21v-6h6v6"/></svg>Hôtels</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l2-5h14l2 5M4 9v11h16V9M3 9h18"/></svg>Dépanneurs</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 12h11l2-8H6"/></svg>Supermarchés</div>
+      <div class="cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 11h16l-2 10H6zM8 11V7a4 4 0 0 1 8 0v4"/></svg>Restauration rapide</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rv"><div><div class="kick">Service</div><h2>Bien plus qu'un fournisseur</h2></div></div>
+    <div class="svc">
+      <div class="sv rv"><span class="n">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Installation et formation des équipements professionnels</h3><p>Les manufacturiers assurent l'installation et la formation directement chez le client comme les présentoirs réfrigérés, chambres froides, d'équipements de crème glacée, équipements de gelato, les machines à poulets frits, les fours à pizza, les machines à café...</p></div>
+      <div class="sv rv"><span class="n">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div><h3>Aide aux financements</h3><p>Les agences Coumar travaille avec la société de crédit bail clé, leader du financement pour petites entreprises qui propose des solutions adaptées aux besoins des PME et des travailleurs autonomes de la restauration.</p></div>
+      <div class="sv rv"><span class="n">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div><h3>Service après-vente complet</h3><p>Son service après-vente offre à sa clientèle un service d'entretien et de réparation ainsi qu'un important inventaire de pièces et d'accessoires.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="wrap">
+    <h3>Des fabricants de renom</h3>
+    <div class="marquee"><div class="track">
+      <span>Coumar</span><span>Gelato Coumar</span><span>Gaggia</span><span>Saeco</span><span>Unic</span><span>Caffitaly</span><span>Cleveland</span><span>Garland</span><span>Convotherm</span><span>Lincoln</span><span>Winston</span><span>Perfect Fry</span><span>Alto-Shaam</span><span>Doyon</span><span>Federal</span><span>Hoshizaki</span><span>Scotsman</span><span>Manitowoc</span><span>Master-Bilt</span><span>True</span><span>Elmeco</span><span>Hamilton Beach</span><span>Resfab</span><span>Server</span><span>Teknaline</span><span>Star</span><span>Gold Medal</span>
+      <span>Coumar</span><span>Gelato Coumar</span><span>Gaggia</span><span>Saeco</span><span>Unic</span><span>Caffitaly</span><span>Cleveland</span><span>Garland</span><span>Convotherm</span><span>Lincoln</span><span>Winston</span><span>Perfect Fry</span><span>Alto-Shaam</span><span>Doyon</span><span>Federal</span><span>Hoshizaki</span><span>Scotsman</span><span>Manitowoc</span><span>Master-Bilt</span><span>True</span><span>Elmeco</span><span>Hamilton Beach</span><span>Resfab</span><span>Server</span><span>Teknaline</span><span>Star</span><span>Gold Medal</span>
+    </div></div>
+  </div>
+</div>
+
+<section class="about" id="apropos">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">À propos</div>
+      <h2>Une entreprise intègre, fiable et compétente</h2>
+      <p>Les agences Coumar sont réputées pour être une entreprise intègre, fiable et compétente distribuant des produits de grande qualité aux professionnels de la restauration. Elles aident les gens de la restauration à bien s'équiper pour mieux servir leur clientèle.</p>
+      <div class="stats"><div><b>1984</b><span>Année de fondation</span></div><div><b>7</b><span>Familles d'équipements</span></div><div><b>25+</b><span>Fabricants représentés</span></div></div>
+    </div>
+    <div class="img rv"><img src="img/banniere.webp" alt="Équipements Les Agences Coumar"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <div class="rv"><div class="kick">Questions fréquentes</div><h2>Avant de vous équiper</h2><p class="lead">Une question sur un équipement ? Appelez-nous au <a href="tel:+14505369006" style="color:var(--bleu);font-weight:700">(450) 536-9006</a>.</p></div>
+    <div class="rv">
+      <details open><summary>Qui installe l'équipement ?</summary><p>Les manufacturiers assurent l'installation et la formation directement chez le client : présentoirs réfrigérés, chambres froides, équipements de crème glacée et de gelato, machines à poulets frits, fours à pizza, machines à café.</p></details>
+      <details><summary>Est-il possible de financer mon achat ?</summary><p>Oui. Les agences Coumar travaillent avec une société de crédit-bail spécialisée dans le financement des PME et des travailleurs autonomes de la restauration.</p></details>
+      <details><summary>Que se passe-t-il en cas de bris ?</summary><p>Le service après-vente offre un service d'entretien et de réparation ainsi qu'un important inventaire de pièces et d'accessoires.</p></details>
+      <details><summary>Livrez-vous hors du Québec ?</summary><p>Les Agences Coumar fournissent des équipements professionnels de restauration à travers le Canada.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Contact</div>
+      <h2>Demandez votre soumission</h2>
+      <p>Dites-nous ce que vous cherchez, nous vous répondons avec les modèles adaptés à votre commerce.</p>
+      <div class="coords">
+        <a href="tel:+14505369006"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(450) 536-9006</a>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>1028, boul. Sir-Wilfrid-Laurier, Mont-Saint-Hilaire (Québec) J3H 6A3</div>
+      </div>
+    </div>
+    <form class="rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Merci, nous vous répondons rapidement'">
+      <label>Nom<input required></label>
+      <label>Entreprise<input></label>
+      <label>Courriel<input type="email" required></label>
+      <label>Téléphone<input type="tel"></label>
+      <label class="full">Type d'équipement<select><option>Équipements pour bar laitier</option><option>Réfrigération</option><option>Cuisson</option><option>Machines à café expresso</option><option>Chariots et paniers de magasinage</option><option>Machines à jus d'orange</option><option>Machines à pop corn</option><option>Pièces et service après-vente</option></select></label>
+      <label class="full">Votre projet<textarea placeholder="Type de commerce, équipements recherchés, échéancier..."></textarea></label>
+      <button class="btn btn-bl full" type="submit">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><img src="img/logo-blanc.png" alt="Les Agences Coumar"><p>Fourniture d'équipements professionnels de restauration à travers le Canada, depuis 1984.</p></div>
+    <div><h4>Nos produits</h4><a href="produit.html">Bar laitier</a><a href="#produits">Réfrigération</a><a href="#produits">Cuisson</a><a href="#produits">Café</a><a href="#produits">Chariots et paniers</a><a href="#produits">Jus d'orange</a><a href="#produits">Pop corn</a></div>
+    <div><h4>Nous joindre</h4><a href="tel:+14505369006">(450) 536-9006</a><a href="#contact">1028, boul. Sir-Wilfrid-Laurier<br>Mont-Saint-Hilaire (Québec)</a><a href="#contact">Demander une soumission</a></div>
+    <div class="copy">© 2026 Les Agences Coumar. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn btn-ln" href="tel:+14505369006">Appeler</a><a class="btn btn-bl" href="#contact">Soumission</a></div>
+<button class="totop" id="totop" aria-label="Haut de page"><svg class="ring" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="#EAF1FA" stroke-width="3"/><circle id="prog" cx="26" cy="26" r="24" fill="none" stroke="#1D4F91" stroke-width="3" stroke-dasharray="150.8" stroke-dashoffset="150.8"/></svg><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script>
+(()=>{const top=document.getElementById('top'),b=document.body;
+const solid=top.classList.contains('solid');
+const tt=document.getElementById('totop'),pr=document.getElementById('prog');
+const rb=document.querySelector('.ribbon');function fixTop(){if(!solid)top.style.top=top.classList.contains('fixed')?'0px':rb.offsetHeight+'px'}addEventListener('resize',fixTop);
+function onS(){const y=scrollY;if(!solid)top.classList.toggle('fixed',y>80);
+const h=document.documentElement.scrollHeight-innerHeight;tt.classList.toggle('on',y>500);pr.style.strokeDashoffset=150.8*(1-(h>0?y/h:0));fixTop()}
+addEventListener('scroll',onS,{passive:true});onS();
+tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+document.getElementById('burger').onclick=()=>b.classList.toggle('menu-open');
+document.querySelectorAll('#nav a').forEach(a=>a.onclick=()=>b.classList.remove('menu-open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const f=document.getElementById('filters');if(f)f.onclick=e=>{const t=e.target.closest('button');if(!t)return;f.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===t));const k=t.dataset.f;document.querySelectorAll('#grid .pc').forEach(c=>c.style.display=(k==='all'||c.dataset.c===k)?'':'none')};
+document.querySelectorAll('.gal .th button').forEach(x=>x.onclick=()=>{document.getElementById('gmain').src=x.dataset.src;document.querySelectorAll('.gal .th button').forEach(y=>y.classList.toggle('on',y===x))});
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Équipements pour bar laitier · Les Agences Coumar · Maquette</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#1D4F91;--bleu2:#2A63AE;--marine:#0E2A50;--marine2:#143866;--ciel:#EAF1FA;--ciel2:#F5F8FC;--ink:#14243D;--muted:#566275;--line:rgba(29,79,145,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:"Fira Sans",system-ui,sans-serif;line-height:1.1;margin:0;color:var(--marine);letter-spacing:-.015em}
+h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:600}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:"Fira Sans";font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu);margin-bottom:14px}
+.kick:before{content:"";width:28px;height:2px;background:currentColor}
+.lead{font-size:1.12rem;color:var(--muted);max-width:720px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:8px;font-family:"Fira Sans";font-weight:600;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .25s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-wh{background:#fff;color:var(--bleu);box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.btn-wh:hover{background:var(--ciel)}
+.btn-bl{background:var(--bleu);color:#fff;box-shadow:0 14px 30px -14px rgba(29,79,145,.9)}
+.btn-bl:hover{background:var(--bleu2)}
+.btn-gh{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn-gh:hover{background:rgba(255,255,255,.16)}
+.btn-ln{border:1.5px solid var(--bleu);color:var(--bleu);background:#fff}
+.btn-ln:hover{background:var(--ciel)}
+.btn-sm{padding:11px 18px;font-size:.92rem}
+
+.ribbon{background:var(--marine);line-height:1.4;color:#fff;font-size:.8rem;text-align:center;padding:8px 12px;position:relative;z-index:7;border-bottom:1px solid rgba(255,255,255,.12)}
+.ribbon b{font-weight:700}
+
+/* en-tête */
+.top{position:absolute;top:36px;left:0;right:0;z-index:6}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px;transition:padding .3s}
+.top.fixed{position:fixed;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 10px 30px -18px rgba(14,42,80,.6);animation:slideDown .35s ease}
+.top.fixed .wrap{padding-top:10px;padding-bottom:10px}
+@keyframes slideDown{from{transform:translateY(-100%)}to{transform:none}}
+.brand{position:relative;display:block}
+.brand img{height:50px;width:auto;transition:height .3s,opacity .3s}
+.brand .lb{position:absolute;inset:0}
+.brand .lc{opacity:0}
+.top.fixed .brand .lc{opacity:1}.top.fixed .brand .lb{opacity:0}
+.top.fixed .brand img{height:40px}
+.top.solid{position:sticky;top:0;background:#fff;box-shadow:0 1px 0 var(--line)}
+.top.solid .brand .lc{opacity:1}.top.solid .brand .lb{opacity:0}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.l{white-space:nowrap;color:rgba(255,255,255,.9);text-decoration:none;font-family:"Fira Sans";font-weight:500;font-size:.96rem;position:relative;padding:4px 0}
+.top.fixed .nav a.l,.top.solid .nav a.l{color:var(--ink)}
+.nav a.l:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav a.l:hover:after,.nav a.l.on:after{transform:scaleX(1)}
+.right{display:flex;align-items:center;gap:14px}
+.tel{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-family:"Fira Sans";font-weight:600;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.top.fixed .tel,.top.solid .tel{color:var(--bleu)}
+.top.fixed .btn-wh,.top.solid .btn-wh{background:var(--bleu);color:#fff}
+.burger{display:none;width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);cursor:pointer;position:relative;z-index:8}
+.top.fixed .burger,.top.solid .burger{border-color:var(--line);background:var(--ciel)}
+.burger i{position:absolute;left:13px;right:13px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.top.fixed .burger i,.top.solid .burger i{background:var(--marine)}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:22px}.burger i:nth-child(3){top:28px}
+body.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger i:nth-child(2){opacity:0}
+body.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* héros */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#2A63AE 0%,transparent 60%),linear-gradient(135deg,#0E2A50 0%,#1D4F91 100%);color:#fff;padding:190px 0 110px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.3rem,4.6vw,3.9rem);font-weight:700;margin-bottom:22px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(255,255,255,.22) 62%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero .kick{color:#BFD3EE}
+.hero p.sub{font-size:1.15rem;color:rgba(255,255,255,.86);max-width:600px;margin:0 0 30px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.9rem}
+.chip svg{width:16px;height:16px}
+.vitrine{position:relative;height:500px}
+.vitrine .card{position:absolute;background:#fff;border-radius:18px;box-shadow:0 40px 70px -30px rgba(0,0,0,.55);overflow:hidden}
+.vitrine .c1{width:58%;left:0;top:30px;height:390px;padding:22px}
+.vitrine .c2{width:46%;right:0;top:0;height:240px}
+.vitrine .c3{width:46%;right:0;bottom:20px;height:220px}
+.vitrine .c1 img{width:100%;height:100%;object-fit:contain}
+.vitrine .c2 img,.vitrine .c3 img{width:100%;height:100%;object-fit:cover}
+.vitrine .tag{position:absolute;left:14px;bottom:14px;background:rgba(14,42,80,.88);color:#fff;font-size:.8rem;font-family:"Fira Sans";font-weight:500;padding:6px 12px;border-radius:6px}
+.badge84{position:absolute;left:-26px;bottom:24px;background:#fff;color:var(--marine);border-radius:14px;padding:16px 20px;box-shadow:0 30px 50px -24px rgba(0,0,0,.6);display:flex;align-items:center;gap:14px;z-index:2}
+.badge84 b{font-family:"Fira Sans";font-size:2rem;color:var(--bleu);line-height:1}
+.badge84 span{font-size:.88rem;line-height:1.3;color:var(--muted)}
+.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:14px}
+.scroll:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:sc 1.8s infinite}
+@keyframes sc{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+
+section{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px;flex-wrap:wrap}
+.head .lead{margin:16px 0 0}
+
+/* catégories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cat{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;transition:transform .3s,box-shadow .3s,border-color .3s}
+.cat:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(14,42,80,.55);border-color:transparent}
+.cat .im{aspect-ratio:16/11;overflow:hidden;background:var(--ciel)}
+.cat .im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.cat .im img.ct{object-fit:contain;padding:14px;background:#fff}
+.cat:hover .im img{transform:scale(1.06)}
+.cat .tx{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat .tx p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.cat .go{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:8px;color:var(--bleu);font-family:"Fira Sans";font-weight:600;font-size:.92rem}
+.cat .go svg{width:16px;height:16px;transition:transform .3s}
+.cat:hover .go svg{transform:translateX(4px)}
+.cat.wide{grid-column:span 2}
+.cat.wide .im{aspect-ratio:auto;height:220px}
+.cat.cta{background:linear-gradient(135deg,var(--marine),var(--bleu));color:#fff;border:0;justify-content:center;padding:30px}
+.cat.cta h3{color:#fff;font-size:1.5rem}
+.cat.cta p{color:rgba(255,255,255,.82);margin:10px 0 18px}
+
+/* clientèle */
+.clients{background:var(--ciel2)}
+.cl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cl{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;font-family:"Fira Sans";font-weight:500;color:var(--marine);transition:background .3s,color .3s}
+.cl svg{width:28px;height:28px;color:var(--bleu);transition:color .3s}
+.cl:hover{background:var(--bleu);color:#fff}
+.cl:hover svg{color:#fff}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sv{position:relative;padding:34px 30px;border-radius:16px;background:#fff;border:1px solid var(--line);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.sv:hover{transform:translateY(-5px);box-shadow:0 30px 50px -32px rgba(14,42,80,.6)}
+.sv .ic{width:58px;height:58px;border-radius:14px;background:var(--ciel);display:grid;place-items:center;color:var(--bleu);margin-bottom:22px;transition:background .3s,color .3s}
+.sv:hover .ic{background:var(--bleu);color:#fff}
+.sv .ic svg{width:28px;height:28px}
+.sv p{color:var(--muted);margin:12px 0 0}
+.sv .n{position:absolute;right:22px;top:16px;font-family:"Fira Sans";font-weight:700;font-size:3.6rem;color:var(--ciel);line-height:1}
+
+/* à propos */
+.about{background:var(--marine);color:#fff;position:relative;overflow:hidden}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about h2{color:#fff}
+.about .kick{color:#BFD3EE}
+.about p{color:rgba(255,255,255,.84);font-size:1.08rem}
+.about .img{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);background:#fff}
+.about .img img{width:100%}
+.stats{display:flex;gap:40px;margin-top:30px;flex-wrap:wrap}
+.stats b{display:block;font-family:"Fira Sans";font-size:2.4rem;color:#fff;line-height:1}
+.stats span{font-size:.9rem;color:#BFD3EE}
+
+/* marques */
+.brands{padding:70px 0;border-bottom:1px solid var(--line)}
+.brands h3{text-align:center;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:28px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:mq 50s linear infinite}
+.track span{white-space:nowrap;font-family:"Fira Sans";font-weight:600;font-size:1.1rem;color:var(--marine);padding:12px 22px;border:1px solid var(--line);border-radius:999px;background:#fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;font-family:"Fira Sans";font-weight:600;font-size:1.1rem;color:var(--marine);display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:1.5rem;line-height:1;color:var(--bleu);transition:transform .3s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--muted);margin:12px 0 0}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--marine),var(--bleu));color:#fff}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+.contact h2{color:#fff}
+.contact .kick{color:#BFD3EE}
+.contact p{color:rgba(255,255,255,.85)}
+.coords{display:flex;flex-direction:column;gap:16px;margin-top:30px}
+.coords a,.coords div{display:flex;gap:14px;align-items:center;color:#fff;text-decoration:none;font-size:1.05rem}
+.coords svg{width:22px;height:22px;flex:none;color:#BFD3EE}
+form{background:#fff;color:var(--ink);border-radius:18px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 40px 70px -30px rgba(0,0,0,.55)}
+form .full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;font-weight:600;color:var(--marine)}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1px solid #CFD8E5;border-radius:8px;background:var(--ciel2);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--bleu);border-color:transparent;background:#fff}
+textarea{min-height:110px;resize:vertical}
+
+footer{background:#0A1F3C;color:rgba(255,255,255,.7);padding:60px 0 100px;font-size:.95rem}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-size:1rem;margin-bottom:14px}
+footer a{color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:3px 0}
+footer a:hover{color:#fff}
+footer .logo img{height:44px;margin-bottom:16px}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;grid-column:1/-1;font-size:.85rem}
+
+/* barre mobile */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:9;background:#fff;box-shadow:0 -10px 30px -12px rgba(14,42,80,.4);padding:10px 12px;gap:10px}
+.mbar a{flex:1;padding:13px 10px;font-size:.95rem}
+.totop{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border-radius:50%;background:#fff;border:0;box-shadow:0 14px 30px -10px rgba(14,42,80,.5);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:8;display:grid;place-items:center}
+.totop.on{opacity:1;pointer-events:auto}
+.totop svg.ring{position:absolute;inset:0;transform:rotate(-90deg)}
+.totop svg.ar{width:20px;height:20px;color:var(--bleu)}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* page produit */
+.crumbs{font-size:.9rem;color:var(--muted);padding:26px 0 0}
+.crumbs a{color:var(--bleu);text-decoration:none}
+.phead{background:var(--ciel2);padding:30px 0 60px}
+.phead .wrap>div.g{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;margin-top:26px}
+.phead h1{font-size:clamp(2.1rem,4vw,3.2rem);margin-bottom:16px}
+.phead .img{border-radius:16px;overflow:hidden}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.filters button{font:inherit;font-size:.92rem;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--marine);cursor:pointer}
+.filters button.on{background:var(--bleu);color:#fff;border-color:var(--bleu)}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+.side{position:sticky;top:90px;border:1px solid var(--line);border-radius:14px;padding:22px}
+.side h4{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.side label{flex-direction:row;align-items:center;gap:10px;font-weight:400;color:var(--ink);padding:5px 0}
+.side input{width:auto}
+.side hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pc{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-5px);box-shadow:0 30px 50px -32px rgba(14,42,80,.6)}
+.pc .im{background:#fff;aspect-ratio:1;padding:18px;border-bottom:1px solid var(--line)}
+.pc .im img{width:100%;height:100%;object-fit:contain}
+.pc .tx{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pc .br{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bleu);font-weight:700}
+.pc h3{font-size:1.08rem}
+.pc .ty{font-size:.9rem;color:var(--muted)}
+.pc .act{margin-top:auto;padding-top:14px;display:flex;gap:8px}
+.pc .act a{flex:1;padding:10px 12px;font-size:.88rem}
+.fiche{background:var(--ciel2)}
+.fiche .wrap>div.g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.gal .main{background:#fff;border-radius:18px;border:1px solid var(--line);padding:30px;aspect-ratio:1}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.gal .th{display:flex;gap:12px;margin-top:14px}
+.gal .th button{width:84px;height:84px;border-radius:12px;border:1px solid var(--line);background:#fff;padding:8px;cursor:pointer}
+.gal .th button.on{border:2px solid var(--bleu)}
+.gal .th img{width:100%;height:100%;object-fit:contain}
+.fiche h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:6px 0 14px}
+.ticks{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks svg{width:22px;height:22px;color:var(--bleu);flex:none;margin-top:2px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:24px 0}
+td{padding:12px 16px;border-bottom:1px solid var(--line);font-size:.95rem}
+td:first-child{font-weight:600;color:var(--marine);width:45%}
+td.af{color:#8A95A6;font-style:italic}
+.note{font-size:.85rem;color:var(--muted);background:#fff;border:1px dashed #B8C6DA;border-radius:10px;padding:12px 14px}
+.pbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+@media (max-width:1100px){
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .cl-grid{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+  .nav{position:fixed;inset:0;background:var(--marine);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .4s;z-index:7}
+  .nav a.l,.top.fixed .nav a.l,.top.solid .nav a.l{color:#fff;font-size:1.4rem}
+  body.menu-open .nav{transform:none;visibility:visible}
+  .nav{visibility:hidden;transition:transform .4s,visibility .4s}
+  .burger{display:block}
+  .tel span,.right .btn{display:none}
+  .hero{padding:150px 0 90px}
+  .hero .wrap,.about .wrap,.contact .wrap,.faq,.phead .wrap>div.g,.fiche .wrap>div.g,.layout{grid-template-columns:1fr}
+  .vitrine{height:380px;margin-top:10px}
+  .badge84{left:10px}
+  .svc{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .mbar{display:flex}
+  .totop{bottom:86px}
+  .side{position:static}
+  section{padding:70px 0}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .cats,.grid{grid-template-columns:1fr}
+  .cat.wide{grid-column:auto}
+  .cl-grid{grid-template-columns:repeat(2,1fr)}
+  form{grid-template-columns:1fr;padding:24px}
+  .vitrine{height:320px}
+  .vitrine .c1{height:290px;width:60%}
+  .vitrine .c2{height:150px}.vitrine .c3{height:140px}
+  .brand img{height:40px}
+  .scroll{display:none}
+  .pc .act{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Aperçu de la page catalogue et d'une fiche produit, préparé par <b>LM Web</b> pour <b>Les Agences Coumar</b> · <a href="index.html" style="color:#fff">Retour à l'accueil</a></div>
+
+<header class="top solid" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Les Agences Coumar"><img class="lc" src="img/logo.png" alt="Les Agences Coumar"><img class="lb" src="img/logo-blanc.png" alt=""></a>
+    <nav class="nav" id="nav">
+      <a class="l on" href="index.html#produits">Nos produits</a>
+      <a class="l" href="index.html#clientele">Clientèle</a>
+      <a class="l" href="index.html#services">Service</a>
+      <a class="l" href="index.html#apropos">À propos</a>
+      <a class="l" href="index.html#contact">Contact</a>
+    </nav>
+    <div class="right">
+      <a class="tel" href="tel:+14505369006"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>(450) 536-9006</span></a>
+      <a class="btn btn-wh btn-sm" href="#soumission">Demander une soumission</a>
+      <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="phead">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Accueil</a> › <a href="index.html#produits">Nos produits</a> › Équipements pour bar laitier</div>
+    <div class="g">
+      <div>
+        <div class="kick">Catalogue</div>
+        <h1>Équipements pour les bars laitiers</h1>
+        <p class="lead">Les agences Coumar fournissent aux compagnies de l'industrie alimentaire des équipements professionnels de bars laitiers. Tous nos équipements sont fabriqués par des entreprises de renom comme : Coumar, Gelato Coumar, MB Master-Bilt, Elmeco, Hamilton Beach, Resfab, Server, Teknaline...</p>
+      </div>
+      <div class="img"><img src="img/bar-laitier.webp" alt="Comptoir à gelato"></div>
+    </div>
+  </div>
+</div>
+
+<section style="padding-top:60px">
+  <div class="wrap">
+    <div class="filters" id="filters">
+      <button class="on" data-f="all">Tout voir</button>
+      <button data-f="molle">Crèmes glacées molles</button>
+      <button data-f="slush">Machines à slush</button>
+      <button data-f="gelato">Comptoirs à gelato</button>
+      <button data-f="yogourt">Yogourt</button>
+      <button data-f="shake">Milk shake</button>
+      <button data-f="artisanale">Glace artisanale</button>
+      <button data-f="chantilly">Chantilly</button>
+    </div>
+    <div class="layout">
+      <aside class="side">
+        <h4>Marques</h4>
+        <label><input type="checkbox">Coumar</label>
+        <label><input type="checkbox">Gelato Coumar</label>
+        <label><input type="checkbox">Master-Bilt</label>
+        <label><input type="checkbox">Elmeco</label>
+        <label><input type="checkbox">Hamilton Beach</label>
+        <label><input type="checkbox">Resfab</label>
+        <label><input type="checkbox">Server</label>
+        <label><input type="checkbox">Teknaline</label>
+        <hr>
+        <h4>Format</h4>
+        <label><input type="checkbox">Comptoir</label>
+        <label><input type="checkbox">Sur pied</label>
+        <hr>
+        <p style="margin:0;font-size:.92rem;color:var(--muted)">Vous ne trouvez pas votre modèle ? <a href="#soumission" style="color:var(--bleu);font-weight:700">Écrivez-nous</a>.</p>
+      </aside>
+      <div class="grid" id="grid">
+        <article class="pc rv" data-c="molle"><div class="im"><img src="img/creme-2.webp" alt=""></div><div class="tx"><span class="br">Coumar</span><h3>Machine à crème glacée molle, 3 leviers</h3><span class="ty">Sur pied</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="molle"><div class="im"><img src="img/creme-3.webp" alt=""></div><div class="tx"><span class="br">Coumar</span><h3>Machine à crème glacée molle, inox</h3><span class="ty">Sur pied</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="molle"><div class="im"><img src="img/creme-4.webp" alt=""></div><div class="tx"><span class="br">Coumar</span><h3>Machine à crème glacée molle de comptoir</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="slush"><div class="im"><img src="img/slush-3.webp" alt=""></div><div class="tx"><span class="br">Elmeco</span><h3>Machine à slush, 3 bacs</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="slush"><div class="im"><img src="img/slush-2.webp" alt=""></div><div class="tx"><span class="br">Bar laitier</span><h3>Machine à slush, 2 bacs</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="gelato"><div class="im"><img src="img/comptoir-gelato.webp" alt=""></div><div class="tx"><span class="br">Master-Bilt</span><h3>Comptoir à gelato vitré</h3><span class="ty">Sur pied</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="yogourt"><div class="im"><img src="img/yogourt.webp" alt=""></div><div class="tx"><span class="br">Resfab</span><h3>Machine à yogourt glacé</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="shake"><div class="im"><img src="img/milkshake.webp" alt=""></div><div class="tx"><span class="br">Hamilton Beach</span><h3>Mélangeur à milk shake</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+        <article class="pc rv" data-c="molle"><div class="im"><img src="img/creme-1.webp" alt=""></div><div class="tx"><span class="br">Coumar</span><h3>Machine à crème glacée molle, 1 levier</h3><span class="ty">Comptoir</span><div class="act"><a class="btn btn-ln" href="#fiche">Voir la fiche</a><a class="btn btn-bl" href="#soumission">Soumission</a></div></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fiche" id="fiche">
+  <div class="wrap">
+    <div class="kick">Exemple de fiche produit</div>
+    <div class="g">
+      <div class="gal rv">
+        <div class="main"><img id="gmain" src="img/creme-2.webp" alt="Machine à crème glacée molle"></div>
+        <div class="th">
+          <button class="on" data-src="img/creme-2.webp"><img src="img/creme-2.webp" alt=""></button>
+          <button data-src="img/creme-3.webp"><img src="img/creme-3.webp" alt=""></button>
+          <button data-src="img/creme-4.webp"><img src="img/creme-4.webp" alt=""></button>
+        </div>
+      </div>
+      <div class="rv">
+        <span class="pc" style="border:0;background:none"><span class="br">Coumar · Machines à crèmes glacées molles</span></span>
+        <h2>Machine à crème glacée molle, 3 leviers</h2>
+        <p style="color:var(--muted);margin:0">Pour bars laitiers, restaurants, dépanneurs et restauration rapide.</p>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Installation et formation directement chez vous par le manufacturier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Financement par crédit-bail adapté aux PME de la restauration</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Service d'entretien, de réparation et inventaire de pièces</li>
+        </ul>
+        <table>
+          <tr><td>Modèle</td><td class="af">À fournir par Coumar</td></tr>
+          <tr><td>Nombre de saveurs</td><td class="af">À fournir par Coumar</td></tr>
+          <tr><td>Production horaire</td><td class="af">À fournir par Coumar</td></tr>
+          <tr><td>Alimentation électrique</td><td class="af">À fournir par Coumar</td></tr>
+          <tr><td>Dimensions (L x P x H)</td><td class="af">À fournir par Coumar</td></tr>
+          <tr><td>Refroidissement</td><td class="af">À fournir par Coumar</td></tr>
+        </table>
+        <p class="note">Maquette : la structure de la fiche est prête, les caractéristiques seront remplies à partir des fiches techniques des fabricants.</p>
+        <div class="pbtns">
+          <a class="btn btn-bl" href="#soumission">Demander une soumission pour ce modèle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ln" href="#fiche">Fiche technique (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="soumission">
+  <div class="wrap">
+    <div class="rv">
+      <div class="kick">Soumission</div>
+      <h2>Ce modèle vous intéresse ?</h2>
+      <p>Indiquez-nous votre commerce et vos besoins, nous vous répondons avec un prix et les options d'installation et de financement.</p>
+      <div class="coords">
+        <a href="tel:+14505369006"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(450) 536-9006</a>
+      </div>
+    </div>
+    <form class="rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Merci, nous vous répondons rapidement'">
+      <label class="full">Produit<input value="Machine à crème glacée molle, 3 leviers"></label>
+      <label>Nom<input required></label>
+      <label>Entreprise<input></label>
+      <label>Courriel<input type="email" required></label>
+      <label>Téléphone<input type="tel"></label>
+      <label class="full">Financement<select><option>Je souhaite connaître les options de crédit-bail</option><option>Achat comptant</option></select></label>
+      <label class="full">Précisions<textarea placeholder="Type de commerce, ville, date d'ouverture souhaitée..."></textarea></label>
+      <button class="btn btn-bl full" type="submit">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><img src="img/logo-blanc.png" alt="Les Agences Coumar"><p>Fourniture d'équipements professionnels de restauration à travers le Canada, depuis 1984.</p></div>
+    <div><h4>Nos produits</h4><a href="#grid">Bar laitier</a><a href="index.html#produits">Réfrigération</a><a href="index.html#produits">Cuisson</a><a href="index.html#produits">Café</a><a href="index.html#produits">Chariots et paniers</a><a href="index.html#produits">Jus d'orange</a><a href="index.html#produits">Pop corn</a></div>
+    <div><h4>Nous joindre</h4><a href="tel:+14505369006">(450) 536-9006</a><a href="index.html#contact">1028, boul. Sir-Wilfrid-Laurier<br>Mont-Saint-Hilaire (Québec)</a></div>
+    <div class="copy">© 2026 Les Agences Coumar. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<div class="mbar"><a class="btn btn-ln" href="tel:+14505369006">Appeler</a><a class="btn btn-bl" href="#soumission">Soumission</a></div>
+<button class="totop" id="totop" aria-label="Haut de page"><svg class="ring" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="#EAF1FA" stroke-width="3"/><circle id="prog" cx="26" cy="26" r="24" fill="none" stroke="#1D4F91" stroke-width="3" stroke-dasharray="150.8" stroke-dashoffset="150.8"/></svg><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script>
+(()=>{const top=document.getElementById('top'),b=document.body;
+const solid=top.classList.contains('solid');
+const tt=document.getElementById('totop'),pr=document.getElementById('prog');
+const rb=document.querySelector('.ribbon');function fixTop(){if(!solid)top.style.top=top.classList.contains('fixed')?'0px':rb.offsetHeight+'px'}addEventListener('resize',fixTop);
+function onS(){const y=scrollY;if(!solid)top.classList.toggle('fixed',y>80);
+const h=document.documentElement.scrollHeight-innerHeight;tt.classList.toggle('on',y>500);pr.style.strokeDashoffset=150.8*(1-(h>0?y/h:0));fixTop()}
+addEventListener('scroll',onS,{passive:true});onS();
+tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+document.getElementById('burger').onclick=()=>b.classList.toggle('menu-open');
+document.querySelectorAll('#nav a').forEach(a=>a.onclick=()=>b.classList.remove('menu-open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const f=document.getElementById('filters');if(f)f.onclick=e=>{const t=e.target.closest('button');if(!t)return;f.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===t));const k=t.dataset.f;document.querySelectorAll('#grid .pc').forEach(c=>c.style.display=(k==='all'||c.dataset.c===k)?'':'none')};
+document.querySelectorAll('.gal .th button').forEach(x=>x.onclick=()=>{document.getElementById('gmain').src=x.dataset.src;document.querySelectorAll('.gal .th button').forEach(y=>y.classList.toggle('on',y===x))});
+})();
+</script>
+
+</body>
+</html>
