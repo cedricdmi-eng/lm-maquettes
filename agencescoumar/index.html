@@ -46,11 +46,11 @@ h3{font-size:1.25rem;font-weight:600}
 .top.fixed .wrap{padding-top:10px;padding-bottom:10px}
 @keyframes slideDown{from{transform:translateY(-100%)}to{transform:none}}
 .brand{position:relative;display:block}
-.brand img{height:50px;width:auto;transition:height .3s,opacity .3s}
+.brand img{height:56px;width:auto;transition:height .3s,opacity .3s}
 .brand .lb{position:absolute;inset:0}
 .brand .lc{opacity:0}
 .top.fixed .brand .lc{opacity:1}.top.fixed .brand .lb{opacity:0}
-.top.fixed .brand img{height:40px}
+.top.fixed .brand img{height:44px}
 .top.solid{position:sticky;top:0;background:#fff;box-shadow:0 1px 0 var(--line)}
 .top.solid .brand .lc{opacity:1}.top.solid .brand .lb{opacity:0}
 .nav{display:flex;align-items:center;gap:28px}
@@ -73,31 +73,26 @@ body.menu-open .burger i:nth-child(2){opacity:0}
 body.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
 /* héros */
-.hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#2A63AE 0%,transparent 60%),linear-gradient(135deg,#0E2A50 0%,#1D4F91 100%);color:#fff;padding:190px 0 110px;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;color:#fff;padding:180px 0 0;overflow:hidden;background:var(--marine)}
+.hbg{position:absolute;inset:0;background:url(img/hero.webp) center right/cover no-repeat;animation:kb 26s ease-in-out infinite alternate;transform-origin:70% 50%}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,42,80,.96) 0%,rgba(14,42,80,.86) 32%,rgba(29,79,145,.45) 62%,rgba(14,42,80,.15) 100%),linear-gradient(0deg,rgba(14,42,80,.85) 0%,transparent 35%)}
+.hero>.wrap{position:relative;z-index:2;width:100%}
+.hero>.wrap>div{max-width:660px}
 .hero h1{color:#fff;font-size:clamp(2.3rem,4.6vw,3.9rem);font-weight:700;margin-bottom:22px}
-.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(255,255,255,.22) 62%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 64%,rgba(255,255,255,.22) 64%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .hero .kick{color:#BFD3EE}
-.hero p.sub{font-size:1.15rem;color:rgba(255,255,255,.86);max-width:600px;margin:0 0 30px}
+.hero p.sub{font-size:1.15rem;color:rgba(255,255,255,.88);max-width:600px;margin:0 0 30px}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.9rem}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);font-size:.9rem;backdrop-filter:blur(6px)}
 .chip svg{width:16px;height:16px}
-.vitrine{position:relative;height:500px}
-.vitrine .card{position:absolute;background:#fff;border-radius:18px;box-shadow:0 40px 70px -30px rgba(0,0,0,.55);overflow:hidden}
-.vitrine .c1{width:58%;left:0;top:30px;height:390px;padding:22px}
-.vitrine .c2{width:46%;right:0;top:0;height:240px}
-.vitrine .c3{width:46%;right:0;bottom:20px;height:220px}
-.vitrine .c1 img{width:100%;height:100%;object-fit:contain}
-.vitrine .c2 img,.vitrine .c3 img{width:100%;height:100%;object-fit:cover}
-.vitrine .tag{position:absolute;left:14px;bottom:14px;background:rgba(14,42,80,.88);color:#fff;font-size:.8rem;font-family:"Fira Sans";font-weight:500;padding:6px 12px;border-radius:6px}
-.badge84{position:absolute;left:-26px;bottom:24px;background:#fff;color:var(--marine);border-radius:14px;padding:16px 20px;box-shadow:0 30px 50px -24px rgba(0,0,0,.6);display:flex;align-items:center;gap:14px;z-index:2}
-.badge84 b{font-family:"Fira Sans";font-size:2rem;color:var(--bleu);line-height:1}
-.badge84 span{font-size:.88rem;line-height:1.3;color:var(--muted)}
-.scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.5);border-radius:14px}
-.scroll:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:#fff;border-radius:2px;animation:sc 1.8s infinite}
-@keyframes sc{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+.hstrip{position:relative;z-index:2;margin-top:70px;border-top:1px solid rgba(255,255,255,.18);background:rgba(14,42,80,.35);backdrop-filter:blur(8px)}
+.hstrip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.hstrip .wrap>div{padding:24px 0 26px;border-left:1px solid rgba(255,255,255,.14);padding-left:24px}
+.hstrip .wrap>div:first-child{border-left:0;padding-left:0}
+.hstrip b{display:block;font-family:"Fira Sans";font-size:1.8rem;line-height:1.1}
+.hstrip span{font-size:.88rem;color:#BFD3EE}
 
 section{padding:100px 0}
 .head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px;flex-wrap:wrap}
@@ -262,7 +257,11 @@ td.af{color:#8A95A6;font-style:italic}
   .nav{visibility:hidden;transition:transform .4s,visibility .4s}
   .burger{display:block}
   .tel span,.right .btn{display:none}
-  .hero{padding:150px 0 90px}
+  .hero{padding:140px 0 0}
+  .hstrip .wrap{grid-template-columns:1fr 1fr}
+  .hstrip .wrap>div:nth-child(3){border-left:0;padding-left:0}
+  .hero:after{background:linear-gradient(180deg,rgba(14,42,80,.55) 0%,rgba(14,42,80,.82) 45%,rgba(14,42,80,.92) 100%)}
+  .hbg{background-position:78% center}
   .hero .wrap,.about .wrap,.contact .wrap,.faq,.phead .wrap>div.g,.fiche .wrap>div.g,.layout{grid-template-columns:1fr}
   .vitrine{height:380px;margin-top:10px}
   .badge84{left:10px}
@@ -311,10 +310,11 @@ td.af{color:#8A95A6;font-style:italic}
 </header>
 
 <section class="hero" id="accueil">
+  <div class="hbg" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rv">
-      <div class="kick">Les Agences Coumar · Depuis 1984</div>
-      <h1>Fourniture d'équipements professionnels de restauration <em>à travers Canada</em></h1>
+      <div class="kick">Depuis 1984 · Mont-Saint-Hilaire</div>
+      <h1>Fourniture d'équipements professionnels de restauration à travers Canada</h1>
       <p class="sub">Fondé en 1984, les Agences Coumar vendent des équipements professionnels aux bars, bars laitiers, gelato, pâtissiers, chocolatiers, restaurants, hôtels, dépanneurs, supermarchés, restauration rapide et pour tous types de commerces.</p>
       <div class="ctas">
         <a class="btn btn-wh" href="#produits">Voir nos produits <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -326,14 +326,8 @@ td.af{color:#8A95A6;font-style:italic}
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Service après-vente complet</span>
       </div>
     </div>
-    <div class="vitrine rv">
-      <div class="card c1"><img src="img/creme-2.webp" alt="Machine à crème glacée molle"></div>
-      <div class="card c2"><img src="img/bar-laitier.webp" alt="Comptoir à gelato"><span class="tag">Bars laitiers et gelato</span></div>
-      <div class="card c3"><img src="img/cuisson.webp" alt="Cuisine professionnelle"><span class="tag">Cuisson</span></div>
-      <div class="badge84"><b>1984</b><span>Plus de 40 ans<br>au service de la restauration</span></div>
-    </div>
   </div>
-  <span class="scroll" aria-hidden="true"></span>
+  <div class="hstrip"><div class="wrap"><div><b>1984</b><span>Année de fondation</span></div><div><b>7</b><span>Familles d'équipements</span></div><div><b>25+</b><span>Fabricants représentés</span></div><div><b>Canada</b><span>Fourniture à travers le pays</span></div></div></div>
 </section>
 
 <section id="produits">
@@ -403,7 +397,7 @@ td.af{color:#8A95A6;font-style:italic}
       <div class="kick">À propos</div>
       <h2>Une entreprise intègre, fiable et compétente</h2>
       <p>Les agences Coumar sont réputées pour être une entreprise intègre, fiable et compétente distribuant des produits de grande qualité aux professionnels de la restauration. Elles aident les gens de la restauration à bien s'équiper pour mieux servir leur clientèle.</p>
-      <div class="stats"><div><b>1984</b><span>Année de fondation</span></div><div><b>7</b><span>Familles d'équipements</span></div><div><b>25+</b><span>Fabricants représentés</span></div></div>
+      
     </div>
     <div class="img rv"><img src="img/banniere.webp" alt="Équipements Les Agences Coumar"></div>
   </div>
